@@ -93,6 +93,7 @@ a.periodic-element {
 .social-media .title,
 .social-media .description {
   background: -webkit-linear-gradient(#ff616d, #ffc171);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -103,6 +104,7 @@ a.periodic-element {
 .personal-info .title,
 .personal-info .description {
   background: -webkit-linear-gradient(#37cfdc, #5a88e5);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -113,6 +115,7 @@ a.periodic-element {
 .software-projects .title,
 .software-projects .description {
   background: -webkit-linear-gradient(#58ac30, #a7df62);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -136,6 +139,7 @@ a.periodic-element {
   vertical-align: middle;
   margin: 0 25px 5px 5px;
   background: -webkit-linear-gradient(#ccc, #eee);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -143,6 +147,7 @@ a.periodic-element {
   display: inline-block;
   margin: 10px 15px 10px 10px;
   background: -webkit-linear-gradient(#ccc, #eee);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
