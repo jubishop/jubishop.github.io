@@ -6,8 +6,7 @@ h1 {
 }
 
 h5 {
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin: 10px 0 50px;
   font: 500 32px "Fira Sans", sans-serif;
   color: #f1f5f6;
   text-align: center;
@@ -52,23 +51,23 @@ a {
 .periodic-element:after {
   z-index: 10;
   content: attr(data-description);
-  background: #f9f8f7;
-  color: #333;
-  width: 180px;
+  background: #fff;
+  color: #000;
+  width: 240px;
   position: absolute;
-  top: 80%;
+  top: 90%;
   opacity: 0;
-  transition: opacity 0.3s ease 0.2s, top 0.3s ease 0.2s;
+  transition: opacity 0.2s ease 0.2s, top 0.2s ease 0.2s;
   height: auto;
-  font-size: 12px;
-  line-height: 1.4;
-  padding: 10px;
-  margin: 0 0 0 -50px;
-  border-radius: 6px;
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 20px 20px;
+  margin: 0 0 0 -80px;
+  border-radius: 8px;
   text-align: center;
 }
 .periodic-element:hover {
-  transform: scale(1.15);
+  transform: scale(1.10);
   z-index: 10;
 }
 .periodic-element:hover .periodic-element-inner {
@@ -79,7 +78,7 @@ a {
   -webkit-text-fill-color: #222;
 }
 .periodic-element:hover:after {
-  top: 105%;
+  top: 103%;
   opacity: 1;
 }
 
