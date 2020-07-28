@@ -30,13 +30,13 @@ a {
   z-index: 2;
   transition: all 0.5s ease;
   position: relative;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  border: 1px solid #fff;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  border: 7px solid #fff;
 }
 .periodic-element-image:hover {
   z-index: 10;
-  transform: scale(1.5);
+  transform: scale(1.6);
 }
 
 .periodic-element {

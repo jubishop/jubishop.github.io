@@ -1,6 +1,18 @@
-.profile-pic {
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  display: block;
+body {
+  counter-reset: galleries;
+}
+
+.gallery {
+  counter-increment: galleries;
+  counter-reset: gallery-image;
+}
+
+.gallery-image {
+  counter-increment: gallery-image;
+  width: 100px;
+  height: 100px;
+}
+
+.gallery::after {
+  content: counter(galleries) " - " counter(gallery-image);
 }
