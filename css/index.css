@@ -37,6 +37,7 @@ a {
 .periodic-element-image:hover {
   z-index: 10;
   transform: scale(1.6);
+  border: 1px solid #fff;
 }
 
 .periodic-element {
