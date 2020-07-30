@@ -4,17 +4,17 @@
 }
 
 h1 {
-  margin-top: 100px;
-  margin-bottom: 0px;
-  font: 700 64px "Fira Sans", sans-serif;
   color: var(--main-text-color);
+  font: 700 64px "Fira Sans", sans-serif;
+  margin-bottom: 0px;
+  margin-top: 100px;
   text-align: center;
 }
 
 h5 {
-  margin: 10px 0 50px;
-  font: 500 32px "Fira Sans", sans-serif;
   color: var(--main-text-color);
+  font: 500 32px "Fira Sans", sans-serif;
+  margin: 10px 0 50px;
   text-align: center;
 }
 
@@ -24,41 +24,41 @@ a {
 
 .periodic-table {
   display: grid;
+  grid-gap: 12px;
   grid-template-columns: repeat(5, 140px);
   grid-template-rows: repeat(3, 140px);
-  grid-gap: 12px;
-  margin: auto;
   justify-content: center;
+  margin: auto;
 }
 
 .periodic-element-image {
-  z-index: 2;
-  transition: all 0.5s ease;
-  position: relative;
-  width: calc(100% - 14px);
-  height: calc(100% - 14px);
   border: var(--element-border) solid #fff;
+  height: calc(100% - 14px);
+  position: relative;
+  transition: all 0.5s ease;
+  width: calc(100% - 14px);
+  z-index: 2;
 }
 .periodic-element-image:hover {
-  z-index: 10;
-  transform: scale(1.6);
   border: 1px solid #fff;
   border-radius: var(--border-radius);
+  transform: scale(1.6);
+  z-index: 10;
 }
 
 .periodic-element {
-  z-index: 1;
+  cursor: default;
   padding: var(--element-border);
   position: relative;
-  cursor: default;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 .periodic-element .periodic-element-inner {
   background: var(--main-bg-color);
-  padding: 20px 10px;
-  width: calc(100% - 20px);
   height: calc(100% - 40px);
+  padding: 20px 10px;
   transition: inherit;
+  width: calc(100% - 20px);
 }
 .periodic-element .title {
   font: 700 60px "Fira Mono", sans-serif;
@@ -74,22 +74,22 @@ a.periodic-element {
 }
 
 .periodic-element:after {
-  z-index: 10;
-  content: attr(data-description);
   background: var(--main-text-color);
-  color: var(--main-bg-color);
-  width: 240px;
-  position: absolute;
-  top: 90%;
-  opacity: 0;
-  transition: opacity 0.2s ease 0.2s, top 0.2s ease 0.2s;
-  height: auto;
-  font-size: 24px;
-  line-height: 1.2;
-  padding: 20px 20px;
-  margin: 0 0 0 -80px;
   border-radius: var(--border-radius);
+  color: var(--main-bg-color);
+  content: attr(data-description);
+  font-size: 24px;
+  height: auto;
+  line-height: 1.2;
+  margin: 0 0 0 -80px;
+  opacity: 0;
+  padding: 20px 20px;
+  position: absolute;
   text-align: center;
+  top: 90%;
+  transition: opacity 0.2s ease 0.2s, top 0.2s ease 0.2s;
+  width: 240px;
+  z-index: 10;
 }
 
 .periodic-element:hover {
@@ -104,8 +104,8 @@ a.periodic-element {
   -webkit-text-fill-color: black;
 }
 .periodic-element:hover:after {
-  top: 103%;
   opacity: 1;
+  top: 103%;
 }
 
 .social-media {
@@ -142,26 +142,26 @@ a.periodic-element {
 }
 
 .legend-table {
-  padding: 15px;
-  text-align: center;
   font-size: 24px;
   margin: 20px auto 0;
+  padding: 15px;
+  text-align: center;
 }
 .legend-table-marker {
-  width: 40px;
+  display: inline-block;
   height: 40px;
   margin: 5px 2px 10px 20px;
-  display: inline-block;
   vertical-align: middle;
+  width: 40px;
 }
 .legend-table-text {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 20px 5px 2px;
   background: var(--main-text-color);
   background-clip: text;
   -webkit-background-clip: text;
+  display: inline-block;
+  margin: 0 20px 5px 2px;
   -webkit-text-fill-color: transparent;
+  vertical-align: middle;
 }
 
 .empty-spacer-1 {
