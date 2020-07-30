@@ -1,5 +1,6 @@
 :root {
   --element-border: 7px;
+  --border-radius: 10px;
 }
 
 h1 {
@@ -42,6 +43,7 @@ a {
   z-index: 10;
   transform: scale(1.6);
   border: 1px solid #fff;
+  border-radius: var(--border-radius);
 }
 
 .periodic-element {
@@ -86,7 +88,7 @@ a.periodic-element {
   line-height: 1.2;
   padding: 20px 20px;
   margin: 0 0 0 -80px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   text-align: center;
 }
 
