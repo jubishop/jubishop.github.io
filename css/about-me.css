@@ -100,7 +100,7 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .timeline-centered .timeline {
     display: table;
   }
@@ -129,7 +129,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .timeline-centered,
 .timeline-centered .timeline-item,
 .timeline-centered .timeline-info,
