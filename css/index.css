@@ -6,14 +6,14 @@ h1 {
   margin-top: 100px;
   margin-bottom: 0px;
   font: 700 64px "Fira Sans", sans-serif;
-  color: var(--main-font-color);
+  color: var(--main-text-color);
   text-align: center;
 }
 
 h5 {
   margin: 10px 0 50px;
   font: 500 32px "Fira Sans", sans-serif;
-  color: var(--main-font-color);
+  color: var(--main-text-color);
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ a.periodic-element {
 .periodic-element:after {
   z-index: 10;
   content: attr(data-description);
-  background: var(--main-font-color);
+  background: var(--main-text-color);
   color: var(--main-bg-color);
   width: 240px;
   position: absolute;
@@ -156,7 +156,7 @@ a.periodic-element {
   display: inline-block;
   vertical-align: middle;
   margin: 0 20px 5px 2px;
-  background: var(--main-font-color);
+  background: var(--main-text-color);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
