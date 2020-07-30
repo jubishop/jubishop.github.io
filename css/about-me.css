@@ -1,5 +1,4 @@
 .timeline {
-  line-height: 1.4em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -10,27 +9,13 @@
   padding-left: 40px;
   position: relative;
 }
-.timeline-item:last-child {
-  padding-bottom: 0;
-}
 
-.timeline-info {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  margin: 0 0 0.5em 0;
+.timeline-date {
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.timeline-marker {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
-.timeline-marker:before {
+.timeline-item:before {
   background: #FF6B6B;
   border: 3px solid transparent;
   border-radius: 100%;
@@ -40,153 +25,92 @@
   left: 0;
   position: absolute;
   top: 4px;
-  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
   width: 15px;
 }
-.timeline-marker:after {
+.timeline-item:after {
   background: #CCD5DB;
-  bottom: 0;
+  bottom: -12px;
   content: "";
   display: block;
-  left: 6px;
+  left: 8px;
   position: absolute;
-  top: 24px;
+  top: 40px;
   width: 3px;
-}
-.timeline-item:last-child .timeline-marker:after {
-  content: none;
-}
-
-.timeline-item:not(.period):hover .timeline-marker:before {
-  background: transparent;
-  border: 3px solid #FF6B6B;
-}
-
-.timeline-content {
-  padding-bottom: 40px;
-}
-.timeline-content p:last-child {
-  margin-bottom: 0;
-}
-
-.period {
-  padding: 0;
-}
-.period .timeline-info {
-  display: none;
-}
-.period .timeline-marker:before {
-  background: transparent;
-  border: none;
-  border-bottom: 3px solid #CCD5DB;
-  border-radius: 0;
-  border-top: 3px solid #CCD5DB;
-  bottom: 30px;
-  content: "";
-  height: auto;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
-.period .timeline-marker:after {
-  content: "";
-  height: 32px;
-  top: auto;
-}
-.period .timeline-content {
-  padding: 40px 0 70px;
-}
-.period .timeline-title {
-  margin: 0;
 }
 
 @media (min-width: 769px) {
-  .timeline-centered .timeline {
+  .timeline {
     display: table;
   }
-  .timeline-centered .timeline-item {
+  .timeline-item {
     display: table-row;
     padding: 0;
   }
-  .timeline-centered .timeline-info,
-.timeline-centered .timeline-marker,
-.timeline-centered .timeline-content {
+  .timeline-date, .timeline-content {
     display: table-cell;
     vertical-align: top;
   }
-  .timeline-centered .timeline-marker {
-    position: relative;
-  }
-  .timeline-centered .timeline-content {
+  .timeline-content {
     padding-left: 30px;
   }
-  .timeline-centered .timeline-info {
+  .timeline-date {
     padding-right: 30px;
   }
-  .timeline-centered .period .timeline-title {
+  .period .timeline-title {
     left: -45px;
     position: relative;
   }
 }
 
 @media (min-width: 1025px) {
-  .timeline-centered,
-.timeline-centered .timeline-item,
-.timeline-centered .timeline-info,
-.timeline-centered .timeline-marker,
-.timeline-centered .timeline-content {
+  .timeline-item,
+  .timeline-date,
+  .timeline-content {
     display: block;
     margin: 0;
     padding: 0;
   }
-  .timeline-centered .timeline-item {
-    overflow: hidden;
-    padding-bottom: 40px;
-  }
-  .timeline-centered .timeline-marker {
+  .timeline-item:before {
     left: 50%;
     margin-left: -7.5px;
     position: absolute;
   }
-  .timeline-centered .timeline-info,
-.timeline-centered .timeline-content {
+  .timeline-date,
+  .timeline-content {
     width: 50%;
   }
-  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+  .timeline-item:nth-child(odd) .timeline-date {
     float: left;
     padding-right: 30px;
     text-align: right;
   }
-  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+  .timeline-item:nth-child(odd) .timeline-content {
     float: right;
     padding-left: 30px;
     text-align: left;
   }
-  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+  .timeline-item:nth-child(even) .timeline-date {
     float: right;
     padding-left: 30px;
     text-align: left;
   }
-  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+  .timeline-item:nth-child(even) .timeline-content {
     float: left;
     padding-right: 30px;
     text-align: right;
   }
-  .timeline-centered > .timeline-item.period .timeline-content {
+  .timeline-item.period .timeline-content {
     float: none;
     padding: 0;
     text-align: center;
     width: 100%;
   }
-  .timeline-centered .timeline-item.period {
-    padding: 50px 0 90px;
-  }
-  .timeline-centered .period .timeline-marker:after {
+  .period .timeline-marker:after {
     bottom: 0;
     height: 30px;
     top: auto;
   }
-  .timeline-centered .period .timeline-title {
+  .period .timeline-title {
     left: auto;
   }
 }
