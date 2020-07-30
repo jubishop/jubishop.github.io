@@ -1,3 +1,7 @@
+:root {
+  --element-border: 7px;
+}
+
 h1 {
   margin-top: 100px;
   margin-bottom: 0px;
@@ -32,7 +36,7 @@ a {
   position: relative;
   width: calc(100% - 14px);
   height: calc(100% - 14px);
-  border: 7px solid #fff;
+  border: var(--element-border) solid #fff;
 }
 .periodic-element-image:hover {
   z-index: 10;
@@ -42,13 +46,13 @@ a {
 
 .periodic-element {
   z-index: 1;
-  padding: 7px;
+  padding: var(--element-border);
   position: relative;
   cursor: default;
   transition: all 0.3s ease;
 }
 .periodic-element .periodic-element-inner {
-  background: #202e38;
+  background: var(--main-bg-color);
   padding: 20px 10px;
   width: calc(100% - 20px);
   height: calc(100% - 40px);

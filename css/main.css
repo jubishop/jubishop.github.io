@@ -1,5 +1,9 @@
+:root {
+  --main-bg-color: #111;
+}
+
 body {
-  background: #202e38;
+  background: var(--main-bg-color);
   font-family: "Fira Mono", monospace;
   font-family: "Fira Sans", sans-serif;
 }
