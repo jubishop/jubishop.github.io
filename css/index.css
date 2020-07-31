@@ -30,6 +30,15 @@ a {
   margin: auto;
 }
 
+.empty-spacer:nth-of-type(1) {
+  grid-column: 4;
+  grid-row: 1;
+}
+.empty-spacer:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
 .periodic-element-image {
   border: var(--element-border) solid #fff;
   height: calc(100% - var(--element-border) * 2);
@@ -45,18 +54,17 @@ a {
 }
 
 .periodic-element {
-  cursor: default;
   padding: var(--element-border);
   position: relative;
   transition: all var(--animation-time) ease;
   z-index: 1;
 }
 .periodic-element .periodic-element-inner {
-  --element-vertical-padding: 1em;
+  --vertical-padding: 1em;
 
   background: var(--main-bg-color);
-  height: calc(100% - var(--element-vertical-padding) * 2);
-  padding: var(--element-vertical-padding) 0;
+  height: calc(100% - var(--vertical-padding) * 2);
+  padding: var(--vertical-padding) 0;
   transition: inherit;
   width: calc(100%);
 }
@@ -68,9 +76,6 @@ a {
   font: 500 1em "Fira Sans", sans-serif;
   margin-top: 0.2em;
   text-align: center;
-}
-a.periodic-element {
-  cursor: pointer;
 }
 
 .periodic-element:hover {
@@ -87,26 +92,30 @@ a.periodic-element {
 
 .periodic-element:after {
   --delay-time: 0.1s;
-  --popup-description: 1em;
-  --popup-padding: 1em;
-  --popup-width: 10em;
+  --description: 1em;
+  --horizontal-padding: 1em;
+  --width: 10em;
 
   background: var(--main-text-color);
   border-radius: var(--border-radius);
   color: var(--main-bg-color);
   content: attr(data-description);
-  font-size: var(--popup-description);
+  font-size: var(--description);
   height: auto;
-  left: calc(((var(--element-size) - var(--popup-width)) / 2)
-             - var(--popup-padding));
+  left: calc(((var(--element-size) - var(--width)) / 2)
+             - var(--horizontal-padding));
   opacity: 0;
-  padding: var(--popup-padding);
+  padding: 0.5em var(--horizontal-padding);
   position: absolute;
   text-align: center;
   top: 75%;
-  transition: opacity var(--animation-time) ease var(--delay-time),
-              top var(--animation-time) ease var(--delay-time);
-  width: var(--popup-width);
+  transition: opacity var(--animation-time)
+                      ease
+                      var(--delay-time),
+              top var(--animation-time)
+                  cubic-bezier(0.25, 0.75, 0.5, 1.5)
+                  var(--delay-time);
+  width: var(--width);
   z-index: 10;
 }
 .periodic-element:hover:after {
@@ -148,10 +157,15 @@ a.periodic-element {
 
 
 .legend {
-  display: grid;
+  display: inline-flex;
   font-size: 1.5em;
+  justify-content: center;
   margin: 1em auto 0;
   text-align: center;
+  width: 100%;
+}
+.legend-element {
+  margin: 0 0.75em;
 }
 .legend-marker {
   --marker-size: 1.5em;
@@ -162,19 +176,5 @@ a.periodic-element {
   width: var(--marker-size);
 }
 .legend-text {
-  background: var(--main-text-color);
-  background-clip: text;
-  display: inline-block;
   vertical-align: middle;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.empty-spacer-1 {
-  grid-column: 4;
-  grid-row: 1;
-}
-.empty-spacer-2 {
-  grid-column: 1;
-  grid-row: 3;
 }
