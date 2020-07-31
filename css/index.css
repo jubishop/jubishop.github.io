@@ -1,24 +1,25 @@
 :root {
-  --element-border: 0.3em;
-  --element-description: 0.66em;
-  --element-description-margin-top: 0.5em;
-  --element-size: 5.8em;
-  --element-title: 2.5em;
-  --element-vertical-padding: 0.8em;
-  --table-gap: 0.5em;
   --border-radius: 0.5em;
+  --element-border: 0.3em;
+  --element-description: 1em;
+  --element-description-margin-top: 0.25em;
+  --element-size: 8em;
+  --element-title: 4em;
+  --element-vertical-padding: 1em;
+  --table-gap: 1em;
 }
 
 h1 {
-  font: 700 2.75em "Fira Sans", sans-serif;
+  font: 700 3em "Fira Sans", sans-serif;
   margin-bottom: 0;
   margin-top: 1em;
   text-align: center;
 }
 
 h5 {
-  font: 500 1.5em "Fira Sans", sans-serif;
-  margin: 0.2em 0 1em;
+  font: 500 2em "Fira Sans", sans-serif;
+  margin-bottom: 1em;
+  margin-top: 0.25em;
   text-align: center;
 }
 
@@ -77,6 +78,18 @@ a.periodic-element {
   cursor: pointer;
 }
 
+.periodic-element:hover {
+  transform: scale(1.20);
+  z-index: 10;
+}
+.periodic-element:hover .periodic-element-inner {
+  background: transparent;
+}
+.periodic-element:hover .title,
+.periodic-element:hover .description {
+  -webkit-text-fill-color: --var(main-bg-color);
+}
+
 .periodic-element:after {
   background: var(--main-text-color);
   border-radius: var(--border-radius);
@@ -94,18 +107,6 @@ a.periodic-element {
   transition: opacity 0.2s ease 0.2s, top 0.2s ease 0.2s;
   width: 240px;
   z-index: 10;
-}
-
-.periodic-element:hover {
-  transform: scale(1.10);
-  z-index: 10;
-}
-.periodic-element:hover .periodic-element-inner {
-  background: transparent;
-}
-.periodic-element:hover .title,
-.periodic-element:hover .description {
-  -webkit-text-fill-color: black;
 }
 .periodic-element:hover:after {
   opacity: 1;
