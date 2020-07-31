@@ -87,7 +87,7 @@ a.periodic-element {
 }
 .periodic-element:hover .title,
 .periodic-element:hover .description {
-  -webkit-text-fill-color: --var(main-bg-color);
+  -webkit-text-fill-color: var(--main-bg-color);
 }
 
 .periodic-element:after {
