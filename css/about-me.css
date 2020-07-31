@@ -13,6 +13,8 @@
   position: relative;
 }
 
+
+/* THIN (DEFAULT) CSS */
 .timeline-item:before {
   background: var(--dot-color);
   border: 3px solid transparent;
@@ -74,6 +76,7 @@
   white-space: nowrap;
 }
 
+/* MEDIUM SCREENS */
 @media (min-width: 769px) {
   .timeline-item {
     display: flex;
@@ -92,6 +95,7 @@
   }
 }
 
+/* WIDE SCREENS */
 @media (min-width: 1025px) {
 
   .timeline-item,
