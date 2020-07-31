@@ -117,46 +117,30 @@ a.periodic-element {
 .social-media {
   --start-color: #ff616d;
   --end-color: #ffc171;
-
-  background: linear-gradient(to bottom right,
-                              var(--start-color) 0%,
-                              var(--end-color) 100%);
-}
-.social-media .title,
-.social-media .description {
-  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
 }
 .personal-info {
   --start-color: #37cfdc;
   --end-color: #5a88e5;
-
-  background: linear-gradient(to bottom right,
-                              var(--start-color) 0%,
-                              var(--end-color) 100%);
-}
-.personal-info .title,
-.personal-info .description {
-  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
 }
 .software-projects {
   --start-color: #58ac30;
   --end-color: #a7df62;
+}
 
+.social-media,
+.personal-info,
+.software-projects {
   background: linear-gradient(to bottom right,
                               var(--start-color) 0%,
                               var(--end-color) 100%);
 }
-.software-projects .title,
-.software-projects .description {
-  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
-}
-
 .social-media .title,
 .social-media .description,
 .personal-info .title,
 .personal-info .description,
 .software-projects .title,
 .software-projects .description {
+  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
