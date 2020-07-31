@@ -1,19 +1,3 @@
-:root {
-  --animation-time: 0.5s;
-  --border-radius: 0.5em;
-  --delay-time: 0.1s;
-  --element-border: 0.3em;
-  --element-description: 1em;
-  --element-description-margin-top: 0.25em;
-  --element-size: 8em;
-  --element-title: 4em;
-  --element-vertical-padding: 1em;
-  --popup-description: 1em;
-  --popup-padding: 1em;
-  --popup-width: 10em;
-  --table-gap: 1em;
-}
-
 h1 {
   font: 700 3em "Fira Sans", sans-serif;
   margin-bottom: 0;
@@ -33,8 +17,13 @@ a {
 }
 
 .periodic-table {
+  --animation-time: 0.5s;
+  --border-radius: 0.5em;
+  --element-border: 0.3em;
+  --element-size: 8em;
+
   display: grid;
-  grid-gap: var(--table-gap);
+  grid-gap: 1em;
   grid-template-columns: repeat(5, var(--element-size));
   grid-template-rows: repeat(3, var(--element-size));
   justify-content: center;
@@ -63,6 +52,8 @@ a {
   z-index: 1;
 }
 .periodic-element .periodic-element-inner {
+  --element-vertical-padding: 1em;
+
   background: var(--main-bg-color);
   height: calc(100% - var(--element-vertical-padding) * 2);
   padding: var(--element-vertical-padding) 0;
@@ -70,12 +61,12 @@ a {
   width: calc(100%);
 }
 .periodic-element .title {
-  font: 700 var(--element-title) "Fira Mono", sans-serif;
+  font: 700 4em "Fira Mono", sans-serif;
   text-align: center;
 }
 .periodic-element .description {
-  font: 500 var(--element-description) "Fira Sans", sans-serif;
-  margin-top: var(--element-description-margin-top);
+  font: 500 1em "Fira Sans", sans-serif;
+  margin-top: 0.25em;
   text-align: center;
 }
 a.periodic-element {
@@ -95,6 +86,11 @@ a.periodic-element {
 }
 
 .periodic-element:after {
+  --delay-time: 0.1s;
+  --popup-description: 1em;
+  --popup-padding: 1em;
+  --popup-width: 10em;
+
   background: var(--main-text-color);
   border-radius: var(--border-radius);
   color: var(--main-bg-color);
@@ -119,40 +115,56 @@ a.periodic-element {
 }
 
 .social-media {
-  background: linear-gradient(to bottom right, #ff616d 0%, #ffc171 100%);
+  --start-color: #ff616d;
+  --end-color: #ffc171;
+
+  background: linear-gradient(to bottom right,
+                              var(--start-color) 0%,
+                              var(--end-color) 100%);
 }
 .social-media .title,
 .social-media .description {
-  background: -webkit-linear-gradient(#ff616d, #ffc171);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
 }
-
 .personal-info {
-  background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);
+  --start-color: #37cfdc;
+  --end-color: #5a88e5;
+
+  background: linear-gradient(to bottom right,
+                              var(--start-color) 0%,
+                              var(--end-color) 100%);
 }
 .personal-info .title,
 .personal-info .description {
-  background: -webkit-linear-gradient(#37cfdc, #5a88e5);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
 }
-
 .software-projects {
-  background: linear-gradient(to bottom right, #58ac30 0%, #a7df62 100%);
+  --start-color: #58ac30;
+  --end-color: #a7df62;
+
+  background: linear-gradient(to bottom right,
+                              var(--start-color) 0%,
+                              var(--end-color) 100%);
 }
 .software-projects .title,
 .software-projects .description {
-  background: -webkit-linear-gradient(#58ac30, #a7df62);
+  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
+}
+
+.social-media .title,
+.social-media .description,
+.personal-info .title,
+.personal-info .description,
+.software-projects .title,
+.software-projects .description {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+
 .legend-table {
-  font-size: 24px;
+  font-size: 1.5em;
   margin: 20px auto 0;
   padding: 15px;
   text-align: center;
