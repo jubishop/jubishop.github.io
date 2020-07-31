@@ -1,8 +1,11 @@
+:root {
+  --dot-color: red;
+  --vertical-line-color: white;
+}
+
 .timeline {
   list-style: none;
-  margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 .timeline-item {
@@ -16,19 +19,19 @@
 }
 
 .timeline-item:before {
-  background: #FF6B6B;
+  background: var(--dot-color);
   border: 3px solid transparent;
   border-radius: 100%;
   content: "";
-  display: block;
   height: 15px;
   left: 0;
   position: absolute;
   top: 4px;
   width: 15px;
 }
+
 .timeline-item:after {
-  background: #CCD5DB;
+  background: var(--vertical-line-color);
   bottom: -12px;
   content: "";
   display: block;
@@ -38,24 +41,56 @@
   width: 3px;
 }
 
+.timeline-period {
+  border-bottom: 3px solid var(--vertical-line-color);
+  border-top: 3px solid var(--vertical-line-color);
+  left: 2px;
+  margin-bottom: 15px;
+  padding: 20px 0px;
+  position: relative;
+  top: -12px;
+  width: 15px;
+}
+
+.timeline-period h2 {
+  margin: 10px 20px;
+  white-space: nowrap;
+}
+
+.timeline-period:after {
+  background: var(--vertical-line-color);;
+  bottom: -22px;
+  content: "";
+  height: 20px;
+  left: 6px;
+  position: absolute;
+  width: 3px;
+}
+
 @media (min-width: 769px) {
   .timeline {
     display: table;
   }
+
   .timeline-item {
     display: table-row;
     padding: 0;
   }
-  .timeline-date, .timeline-content {
+
+  .timeline-date,
+  .timeline-content {
     display: table-cell;
     vertical-align: top;
   }
+
   .timeline-content {
     padding-left: 30px;
   }
+
   .timeline-date {
     padding-right: 30px;
   }
+
   .period .timeline-title {
     left: -45px;
     position: relative;
@@ -63,6 +98,7 @@
 }
 
 @media (min-width: 1025px) {
+
   .timeline-item,
   .timeline-date,
   .timeline-content {
@@ -70,46 +106,55 @@
     margin: 0;
     padding: 0;
   }
+
   .timeline-item:before {
     left: 50%;
     margin-left: -7.5px;
     position: absolute;
   }
+
   .timeline-date,
   .timeline-content {
     width: 50%;
   }
+
   .timeline-item:nth-child(odd) .timeline-date {
     float: left;
     padding-right: 30px;
     text-align: right;
   }
+
   .timeline-item:nth-child(odd) .timeline-content {
     float: right;
     padding-left: 30px;
     text-align: left;
   }
+
   .timeline-item:nth-child(even) .timeline-date {
     float: right;
     padding-left: 30px;
     text-align: left;
   }
+
   .timeline-item:nth-child(even) .timeline-content {
     float: left;
     padding-right: 30px;
     text-align: right;
   }
+
   .timeline-item.period .timeline-content {
     float: none;
     padding: 0;
     text-align: center;
     width: 100%;
   }
+
   .period .timeline-marker:after {
     bottom: 0;
     height: 30px;
     top: auto;
   }
+
   .period .timeline-title {
     left: auto;
   }
