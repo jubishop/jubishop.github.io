@@ -147,27 +147,27 @@ a.periodic-element {
 }
 
 
-.legend-table {
+.legend {
+  display: grid;
   font-size: 1.5em;
-  margin: 20px auto 0;
-  padding: 15px;
+  margin: 1em auto 0;
   text-align: center;
 }
-.legend-table-marker {
+.legend-marker {
+  --marker-size: 1.5em;
+
   display: inline-block;
-  height: 40px;
-  margin: 5px 2px 10px 20px;
+  height: var(--marker-size);
   vertical-align: middle;
-  width: 40px;
+  width: var(--marker-size);
 }
-.legend-table-text {
+.legend-text {
   background: var(--main-text-color);
   background-clip: text;
-  -webkit-background-clip: text;
   display: inline-block;
-  margin: 0 20px 5px 2px;
-  -webkit-text-fill-color: transparent;
   vertical-align: middle;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .empty-spacer-1 {
