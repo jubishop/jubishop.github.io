@@ -1,8 +1,9 @@
 :root {
   --dot-color: red;
-  --vertical-line-color: white;
-  --left-column-width: 240px;
+  --dot-size: 26px;
   --grid-gap: 60px;
+  --left-column-width: 240px;
+  --vertical-line-color: white;
 }
 
 .timeline {
@@ -19,14 +20,12 @@
 /* THIN (DEFAULT) CSS */
 .timeline-item:before {
   background: var(--dot-color);
-  border: 3px solid transparent;
   border-radius: 100%;
   content: "";
-  height: 15px;
-  left: 0px;
+  height: var(--dot-size);
+  left: calc((20px - var(--dot-size)) / 2);
   position: absolute;
-  top: 4px;
-  width: 15px;
+  width: var(--dot-size);
 }
 
 .timeline-item:after {
@@ -82,19 +81,19 @@
 @media (min-width: 769px) {
   .timeline-item {
     display: grid;
-    grid-gap: var(--grid-gap);
+    gap: var(--grid-gap);
     grid-template-columns: var(--left-column-width) auto;
     grid-template-rows: auto;
     padding: 0px;
   }
 
   .timeline-item:before {
-    left: calc(var(--grid-gap) / 2 + var(--left-column-width) - 8px);
+    left: calc(var(--grid-gap) / 2 + var(--left-column-width) + ((20px - var(--dot-size)) / 2) - 8px);
   }
 
   .timeline-item:after {
-    left: calc(var(--grid-gap) / 2 + var(--left-column-width));
     bottom: 12px;
+    left: calc(var(--grid-gap) / 2 + var(--left-column-width));
   }
 
   .timeline-date {
@@ -111,5 +110,4 @@
 }
 
 /* WIDE SCREENS */
-@media (min-width: 1025px) {
-}
+@media (min-width: 1025px) {}
