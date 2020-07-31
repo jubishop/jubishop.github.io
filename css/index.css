@@ -34,6 +34,7 @@ a {
   grid-column: 4;
   grid-row: 1;
 }
+
 .empty-spacer:nth-of-type(2) {
   grid-column: 1;
   grid-row: 3;
@@ -46,6 +47,7 @@ a {
   width: calc(100% - var(--element-border) * 2);
   z-index: 2;
 }
+
 .periodic-element-image:hover {
   border: 0.1em solid #fff;
   border-radius: var(--border-radius);
@@ -59,6 +61,7 @@ a {
   transition: all var(--animation-time) ease;
   z-index: 1;
 }
+
 .periodic-element .periodic-element-inner {
   --vertical-padding: 1em;
 
@@ -68,10 +71,12 @@ a {
   transition: inherit;
   width: calc(100%);
 }
+
 .periodic-element .title {
   font: 700 4em "Fira Mono", sans-serif;
   text-align: center;
 }
+
 .periodic-element .description {
   font: 500 1em "Fira Sans", sans-serif;
   margin-top: 0.2em;
@@ -82,9 +87,11 @@ a {
   transform: scale(1.10);
   z-index: 10;
 }
+
 .periodic-element:hover .periodic-element-inner {
   background: transparent;
 }
+
 .periodic-element:hover .title,
 .periodic-element:hover .description {
   -webkit-text-fill-color: var(--main-bg-color);
@@ -102,22 +109,18 @@ a {
   content: attr(data-description);
   font-size: var(--description);
   height: auto;
-  left: calc(((var(--element-size) - var(--width)) / 2)
-             - var(--horizontal-padding));
+  left: calc(((var(--element-size) - var(--width)) / 2) - var(--horizontal-padding));
   opacity: 0;
   padding: 0.5em var(--horizontal-padding);
   position: absolute;
   text-align: center;
   top: 75%;
-  transition: opacity var(--animation-time)
-                      ease
-                      var(--delay-time),
-              top var(--animation-time)
-                  cubic-bezier(0.25, 0.75, 0.5, 1.5)
-                  var(--delay-time);
+  transition: opacity var(--animation-time) ease var(--delay-time),
+    top var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
   width: var(--width);
   z-index: 10;
 }
+
 .periodic-element:hover:after {
   opacity: 1;
   top: 101%;
@@ -127,10 +130,12 @@ a {
   --start-color: #ff616d;
   --end-color: #ffc171;
 }
+
 .personal-info {
   --start-color: #37cfdc;
   --end-color: #5a88e5;
 }
+
 .software-projects {
   --start-color: #58ac30;
   --end-color: #a7df62;
@@ -140,9 +145,10 @@ a {
 .personal-info,
 .software-projects {
   background: linear-gradient(to bottom right,
-                              var(--start-color) 0%,
-                              var(--end-color) 100%);
+      var(--start-color) 0%,
+      var(--end-color) 100%);
 }
+
 .social-media .title,
 .social-media .description,
 .personal-info .title,
@@ -164,9 +170,11 @@ a {
   text-align: center;
   width: 100%;
 }
+
 .legend-element {
   margin: 0 0.75em;
 }
+
 .legend-marker {
   --marker-size: 1.5em;
 
@@ -175,6 +183,7 @@ a {
   vertical-align: middle;
   width: var(--marker-size);
 }
+
 .legend-text {
   vertical-align: middle;
 }

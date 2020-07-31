@@ -1,46 +1,55 @@
 :root {
   --dot-color: red;
-  --dot-size: 26px;
-  --grid-gap: 60px;
-  --left-column-width: 240px;
+  --dot-size: 1em;
+  --dot-margin: 0.5em;
   --vertical-line-color: white;
+  --vertical-line-width: 0.2em;
 }
 
 .timeline {
-  list-style: none;
-  padding: 0px;
+  /* list-style: none; */
+  margin-top: 5em;
+  padding: 1em;
 }
 
+/* THIN (DEFAULT) CSS */
 .timeline-item {
-  padding-left: 40px;
+  padding-left: 2em;
   position: relative;
 }
 
-
-/* THIN (DEFAULT) CSS */
 .timeline-item:before {
   background: var(--dot-color);
   border-radius: 100%;
   content: "";
   height: var(--dot-size);
-  left: calc((20px - var(--dot-size)) / 2);
+  left: 0;
   position: absolute;
   width: var(--dot-size);
 }
 
 .timeline-item:after {
   background: var(--vertical-line-color);
-  bottom: -12px;
+  bottom: var(--dot-margin);
   content: "";
-  left: 8px;
+  left: calc((var(--dot-size) - var(--vertical-line-width)) / 2);
   position: absolute;
-  top: 40px;
-  width: 3px;
+  top: calc(var(--dot-size) + var(--dot-margin));
+  width: var(--vertical-line-width);
 }
 
 .timeline-date {
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.timeline-content {
+  padding: 1em 0;
+}
+
+.timeline-content h3,
+.timeline-content p {
+  margin: 0;
 }
 
 .timeline-period:before,
@@ -79,6 +88,11 @@
 
 /* MEDIUM SCREENS */
 @media (min-width: 769px) {
+  :root {
+    --grid-gap: 2em;
+    --left-column-width: 240px;
+  }
+
   .timeline-item {
     display: grid;
     gap: var(--grid-gap);
