@@ -5,17 +5,12 @@
 
 .timeline {
   list-style: none;
-  padding: 0;
+  padding: 0px;
 }
 
 .timeline-item {
   padding-left: 40px;
   position: relative;
-}
-
-.timeline-date {
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .timeline-item:before {
@@ -24,7 +19,7 @@
   border-radius: 100%;
   content: "";
   height: 15px;
-  left: 0;
+  left: 0px;
   position: absolute;
   top: 4px;
   width: 15px;
@@ -38,6 +33,11 @@
   position: absolute;
   top: 40px;
   width: 3px;
+}
+
+.timeline-date {
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .timeline-period:before,
@@ -75,32 +75,20 @@
 }
 
 @media (min-width: 769px) {
-  .timeline {
-    display: table;
-  }
-
   .timeline-item {
-    display: table-row;
-    padding: 0;
+    display: flex;
   }
 
-  .timeline-date,
-  .timeline-content {
-    display: table-cell;
-    vertical-align: top;
+  .timeline-item:before {
+    left: 200px;
   }
 
-  .timeline-content {
-    padding-left: 30px;
+  .timeline-item:after {
+    left: 208px;
   }
 
-  .timeline-date {
-    padding-right: 30px;
-  }
-
-  .period .timeline-title {
-    left: -45px;
-    position: relative;
+  .timeline-content h3 {
+    margin: 0px 20px;
   }
 }
 
@@ -110,8 +98,8 @@
   .timeline-date,
   .timeline-content {
     display: block;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
   }
 
   .timeline-item:before {
@@ -151,13 +139,13 @@
 
   .timeline-item.period .timeline-content {
     float: none;
-    padding: 0;
+    padding: 0px;
     text-align: center;
     width: 100%;
   }
 
   .period .timeline-marker:after {
-    bottom: 0;
+    bottom: 0px;
     height: 30px;
     top: auto;
   }
