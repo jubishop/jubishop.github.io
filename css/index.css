@@ -1,18 +1,24 @@
 :root {
-  --element-border: 7px;
-  --border-radius: 10px;
+  --element-border: 0.3em;
+  --element-description: 0.66em;
+  --element-description-margin-top: 0.5em;
+  --element-size: 5.8em;
+  --element-title: 2.5em;
+  --element-vertical-padding: 0.8em;
+  --table-gap: 0.5em;
+  --border-radius: 0.5em;
 }
 
 h1 {
-  font: 700 64px "Fira Sans", sans-serif;
-  margin-bottom: 0px;
-  margin-top: 100px;
+  font: 700 2.75em "Fira Sans", sans-serif;
+  margin-bottom: 0;
+  margin-top: 1em;
   text-align: center;
 }
 
 h5 {
-  font: 500 32px "Fira Sans", sans-serif;
-  margin: 10px 0 50px;
+  font: 500 1.5em "Fira Sans", sans-serif;
+  margin: 0.2em 0 1em;
   text-align: center;
 }
 
@@ -22,23 +28,23 @@ a {
 
 .periodic-table {
   display: grid;
-  grid-gap: 12px;
-  grid-template-columns: repeat(5, 140px);
-  grid-template-rows: repeat(3, 140px);
+  grid-gap: var(--table-gap);
+  grid-template-columns: repeat(5, var(--element-size));
+  grid-template-rows: repeat(3, var(--element-size));
   justify-content: center;
   margin: auto;
 }
 
 .periodic-element-image {
   border: var(--element-border) solid #fff;
-  height: calc(100% - 14px);
+  height: calc(100% - var(--element-border) * 2);
   position: relative;
   transition: all 0.5s ease;
-  width: calc(100% - 14px);
+  width: calc(100% - var(--element-border) * 2);
   z-index: 2;
 }
 .periodic-element-image:hover {
-  border: 1px solid #fff;
+  border: 0.1em solid #fff;
   border-radius: var(--border-radius);
   transform: scale(1.6);
   z-index: 10;
@@ -53,18 +59,18 @@ a {
 }
 .periodic-element .periodic-element-inner {
   background: var(--main-bg-color);
-  height: calc(100% - 40px);
-  padding: 20px 10px;
+  height: calc(100% - var(--element-vertical-padding) * 2);
+  padding: var(--element-vertical-padding) 0;
   transition: inherit;
-  width: calc(100% - 20px);
+  width: calc(100%);
 }
 .periodic-element .title {
-  font: 700 60px "Fira Mono", sans-serif;
+  font: 700 var(--element-title) "Fira Mono", sans-serif;
   text-align: center;
 }
 .periodic-element .description {
-  font: 500 16px "Fira Sans", sans-serif;
-  margin-top: 4px;
+  font: 500 var(--element-description) "Fira Sans", sans-serif;
+  margin-top: var(--element-description-margin-top);
   text-align: center;
 }
 a.periodic-element {
