@@ -101,7 +101,8 @@ a.periodic-element {
   content: attr(data-description);
   font-size: var(--popup-description);
   height: auto;
-  left: calc(var(--element-size) - var(--popup-width));
+  left: calc(((var(--element-size) - var(--popup-width)) / 2)
+             - var(--popup-padding));
   opacity: 0;
   padding: var(--popup-padding);
   position: absolute;
