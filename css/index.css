@@ -1,11 +1,16 @@
 :root {
+  --animation-time: 0.5s;
   --border-radius: 0.5em;
+  --delay-time: 0.1s;
   --element-border: 0.3em;
   --element-description: 1em;
   --element-description-margin-top: 0.25em;
   --element-size: 8em;
   --element-title: 4em;
   --element-vertical-padding: 1em;
+  --popup-description: 1em;
+  --popup-padding: 1em;
+  --popup-width: 10em;
   --table-gap: 1em;
 }
 
@@ -39,8 +44,7 @@ a {
 .periodic-element-image {
   border: var(--element-border) solid #fff;
   height: calc(100% - var(--element-border) * 2);
-  position: relative;
-  transition: all 0.5s ease;
+  transition: all var(--animation-time) ease;
   width: calc(100% - var(--element-border) * 2);
   z-index: 2;
 }
@@ -55,7 +59,7 @@ a {
   cursor: default;
   padding: var(--element-border);
   position: relative;
-  transition: all 0.3s ease;
+  transition: all var(--animation-time) ease;
   z-index: 1;
 }
 .periodic-element .periodic-element-inner {
@@ -79,7 +83,7 @@ a.periodic-element {
 }
 
 .periodic-element:hover {
-  transform: scale(1.20);
+  transform: scale(1.10);
   z-index: 10;
 }
 .periodic-element:hover .periodic-element-inner {
@@ -95,22 +99,22 @@ a.periodic-element {
   border-radius: var(--border-radius);
   color: var(--main-bg-color);
   content: attr(data-description);
-  font-size: 24px;
+  font-size: var(--popup-description);
   height: auto;
-  line-height: 1.2;
-  margin: 0 0 0 -80px;
+  left: calc(var(--element-size) - var(--popup-width));
   opacity: 0;
-  padding: 20px 20px;
+  padding: var(--popup-padding);
   position: absolute;
   text-align: center;
-  top: 90%;
-  transition: opacity 0.2s ease 0.2s, top 0.2s ease 0.2s;
-  width: 240px;
+  top: 75%;
+  transition: opacity var(--animation-time) ease var(--delay-time),
+              top var(--animation-time) ease var(--delay-time);
+  width: var(--popup-width);
   z-index: 10;
 }
 .periodic-element:hover:after {
   opacity: 1;
-  top: 103%;
+  top: 101%;
 }
 
 .social-media {
