@@ -207,8 +207,7 @@
     grid-template-areas: "content date";
   }
 
-  .timeline-item:before,
-  .timeline-period {
+  .timeline-item:before {
     left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
 
@@ -222,5 +221,16 @@
 
   .timeline-content {
     grid-area: content;
+  }
+
+  .timeline-period {
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .timeline-period:before,
+  .timeline-period:after {
+    left: calc(50% - var(--vertical-line-width) / 2);
   }
 }
