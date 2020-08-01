@@ -5,6 +5,10 @@
   --vertical-line-width: 0.2em;
 }
 
+h1 {
+  text-align: center;
+}
+
 .timeline {
   list-style: none;
   margin: 0;
@@ -62,7 +66,7 @@
 .carousel-cell {
   align-items: center;
   display: flex;
-  height: 8em;
+  height: 20em;
   justify-content: center;
   width: 100%;
 }
