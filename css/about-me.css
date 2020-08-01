@@ -99,7 +99,6 @@
 
   height: calc(100% - var(--icon-padding) * 2);
   left: var(--icon-padding);
-  position: absolute;
   top: var(--icon-padding);
   width: calc(100% - var(--icon-padding) * 2);
 }
