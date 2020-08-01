@@ -19,7 +19,7 @@
 }
 
 .timeline-item:before {
-  background: red;
+  background: #900;
   border-radius: 100%;
   content: "";
   height: var(--dot-size);
@@ -57,6 +57,7 @@
 .carousel {
   margin-top: calc(var(--dot-size) / 2);
   margin-bottom: 1em;
+  background: #333;
 }
 .carousel-cell {
   align-items: center;
