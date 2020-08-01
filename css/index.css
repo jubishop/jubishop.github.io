@@ -28,7 +28,6 @@ a {
   grid-template-columns: repeat(5, var(--element-size));
   grid-template-rows: repeat(3, var(--element-size));
   justify-content: center;
-  margin: auto;
 }
 
 .empty-spacer:nth-of-type(1) {
