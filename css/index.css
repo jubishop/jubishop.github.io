@@ -16,6 +16,7 @@ a {
   text-decoration: none;
 }
 
+
 .periodic-table {
   --animation-time: 0.5s;
   --border-radius: 0.5em;
@@ -125,6 +126,7 @@ a {
   opacity: 1;
   top: 101%;
 }
+
 
 .social-media {
   --start-color: #ff616d;

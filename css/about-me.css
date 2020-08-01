@@ -1,5 +1,4 @@
 :root {
-  --dot-color: red;
   --dot-size: 1em;
   --dot-margin: 0.5em;
   --vertical-line-color: white;
@@ -7,19 +6,20 @@
 }
 
 .timeline {
-  /* list-style: none; */
-  margin-top: 5em;
+  list-style: none;
+  margin: 0;
   padding: 1em;
 }
 
 /* THIN (DEFAULT) CSS */
 .timeline-item {
+  margin-top: var(--dot-margin);
   padding-left: 2em;
   position: relative;
 }
 
 .timeline-item:before {
-  background: var(--dot-color);
+  background: red;
   border-radius: 100%;
   content: "";
   height: var(--dot-size);
@@ -30,7 +30,7 @@
 
 .timeline-item:after {
   background: var(--vertical-line-color);
-  bottom: var(--dot-margin);
+  bottom: 0;
   content: "";
   left: calc((var(--dot-size) - var(--vertical-line-width)) / 2);
   position: absolute;
@@ -52,37 +52,37 @@
   margin: 0;
 }
 
+.timeline-period {
+  --line-padding: 2em;
+  --separator-thickness: 0.2em;
+
+  border-bottom: var(--separator-thickness) solid var(--vertical-line-color);
+  border-top: var(--separator-thickness) solid var(--vertical-line-color);
+  margin: var(--line-padding) 0;
+  position: relative;
+  width: var(--dot-size);
+}
+
 .timeline-period:before,
 .timeline-period:after {
   background: var(--vertical-line-color);
   content: "";
-  height: 25px;
-  left: 6px;
+  left: calc((var(--dot-size) - var(--vertical-line-width)) / 2);
   position: absolute;
-  width: 3px;
+  width: var(--vertical-line-width);
 }
 
 .timeline-period:before {
-  top: -25px;
+  height: var(--line-padding);
+  top: calc(var(--line-padding) * -1 - var(--separator-thickness));
 }
 
 .timeline-period:after {
-  bottom: -25px;
-}
-
-.timeline-period {
-  border-bottom: 3px solid var(--vertical-line-color);
-  border-top: 3px solid var(--vertical-line-color);
-  left: 2px;
-  margin-bottom: 40px;
-  padding: 10px 0px;
-  position: relative;
-  top: 10px;
-  width: 15px;
+  bottom: calc(var(--line-padding) * -1 + var(--dot-margin) - var(--separator-thickness));
+  height: calc(var(--line-padding) - var(--dot-margin));
 }
 
 .timeline-period h2 {
-  padding-left: 10px;
   white-space: nowrap;
 }
 
