@@ -170,6 +170,10 @@
     left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
 
+  .timeline-period {
+    width: calc(100% - var(--left-column-width) - var(--grid-gap) / 2 + var(--dot-size) / 2);
+  }
+
   .timeline-item:after {
     left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--vertical-line-width) / 2);
   }
@@ -226,6 +230,7 @@
   .timeline-period {
     left: 0;
     text-align: center;
+    width: 100%;
   }
 
   .timeline-period:before,
