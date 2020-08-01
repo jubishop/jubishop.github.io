@@ -128,7 +128,7 @@
   margin: var(--period-padding) 0;
   position: relative;
   white-space: nowrap;
-  width: var(--dot-size);
+  width: 100%;
 }
 
 .timeline-period:before,
@@ -192,7 +192,7 @@
   }
 
   .timeline-item:nth-of-type(even) {
-    grid-template-areas: "date content"
+    grid-template-areas: "date content";
   }
 
   .timeline-item:nth-of-type(odd) .timeline-date {
@@ -225,7 +225,6 @@
 
   .timeline-period {
     left: 0;
-    width: 100%;
     text-align: center;
   }
 
