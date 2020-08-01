@@ -183,11 +183,12 @@
   }
 }
 
+
 /* WIDE SCREENS */
 @media (min-width: 1025px) {
   .timeline-item {
     grid-template-columns: 50% 50%;
-    width: 100%;
+    width: calc(100% - var(--grid-gap));
   }
 
   .timeline-item:nth-of-type(even) {
