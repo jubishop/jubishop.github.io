@@ -34,16 +34,6 @@ a {
   justify-content: center;
 }
 
-.empty-spacer:nth-of-type(1) {
-  grid-column: 4;
-  grid-row: 1;
-}
-
-.empty-spacer:nth-of-type(2) {
-  grid-column: 1;
-  grid-row: 3;
-}
-
 .periodic-element-image {
   border: var(--element-border) solid #fff;
   height: calc(100% - var(--element-border) * 2);
