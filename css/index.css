@@ -45,7 +45,8 @@ a {
 .social-media,
 .personal-info,
 .software-projects {
-  background: linear-gradient(to bottom right,
+  background: linear-gradient(
+      to bottom right,
       var(--start-color) 0%,
       var(--end-color) 100%);
 }
