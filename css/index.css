@@ -1,6 +1,42 @@
 body {
   white-space: nowrap;
 }
+a {
+  text-decoration: none;
+}
+
+.info-icon {
+  font-size: 2em;
+  left: 0;
+  margin: 0.5em;
+  position: absolute;
+  top: 0;
+  cursor: help;
+}
+.info-content {
+  --animation-time: 0.5s;
+  --delay-time: 0.1s;
+  font-size: 1em;
+  background: var(--main-text-color);
+  border-radius: 1em;
+  color: var(--main-bg-color);
+  left: 1em;
+  opacity: 0;
+  padding: 1em;
+  pointer-events: none;
+  position: absolute;
+  top: 0.5em;
+  transition: opacity var(--animation-time) ease var(--delay-time),
+              left var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
+  z-index: 10;
+}
+.info-icon:hover + .info-content,
+.info-content:hover {
+  opacity: 1;
+  left: 2.5em;
+  pointer-events: auto;
+}
+
 h1 {
   font: 700 3em "Fira Sans", sans-serif;
   margin-bottom: 0;
@@ -12,9 +48,6 @@ h5 {
   margin-bottom: 1em;
   margin-top: 0.25em;
   text-align: center;
-}
-a {
-  text-decoration: none;
 }
 
 .periodic-table {
@@ -127,7 +160,7 @@ a {
   text-align: center;
   top: 50%;
   transition: opacity var(--animation-time) ease var(--delay-time),
-    top var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
+              top var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
   width: var(--width);
   z-index: 10;
 }
