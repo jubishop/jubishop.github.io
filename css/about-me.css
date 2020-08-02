@@ -78,6 +78,7 @@ h1 {
 }
 .carousel-image {
   max-height: 100%;
+  max-width: 100%;
 }
 .flickity-button {
   background: #666;
