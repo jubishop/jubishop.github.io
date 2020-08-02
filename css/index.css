@@ -1,25 +1,21 @@
 body {
   white-space: nowrap;
 }
-
 h1 {
   font: 700 3em "Fira Sans", sans-serif;
   margin-bottom: 0;
   margin-top: 1em;
   text-align: center;
 }
-
 h5 {
   font: 500 2em "Fira Sans", sans-serif;
   margin-bottom: 1em;
   margin-top: 0.25em;
   text-align: center;
 }
-
 a {
   text-decoration: none;
 }
-
 
 .periodic-table {
   --animation-time: 0.5s;
@@ -34,6 +30,26 @@ a {
   justify-content: center;
 }
 
+.social-media {
+  --start-color: #ff616d;
+  --end-color: #ffc171;
+}
+.personal-info {
+  --start-color: #37cfdc;
+  --end-color: #5a88e5;
+}
+.software-projects {
+  --start-color: #58ac30;
+  --end-color: #a7df62;
+}
+.social-media,
+.personal-info,
+.software-projects {
+  background: linear-gradient(to bottom right,
+      var(--start-color) 0%,
+      var(--end-color) 100%);
+}
+
 .periodic-element-image {
   border: var(--element-border) solid #fff;
   height: calc(100% - var(--element-border) * 2);
@@ -41,7 +57,6 @@ a {
   width: calc(100% - var(--element-border) * 2);
   z-index: 2;
 }
-
 .periodic-element-image:hover {
   border: 0.1em solid #fff;
   border-radius: var(--border-radius);
@@ -55,37 +70,36 @@ a {
   transition: all var(--animation-time) ease;
   z-index: 1;
 }
-
 .periodic-element .periodic-element-inner {
-  --vertical-padding: 1em;
-
   background: var(--main-bg-color);
-  height: calc(100% - var(--vertical-padding) * 2);
-  padding: var(--vertical-padding) 0;
-  transition: inherit;
-  width: calc(100%);
+  height: 100%;
 }
 
 .periodic-element .title {
   font: 700 4em "Fira Mono", sans-serif;
+  padding-top: 0.25em;
   text-align: center;
 }
-
 .periodic-element .description {
   font: 500 1em "Fira Sans", sans-serif;
-  margin-top: 0.2em;
+  padding-top: 0.1em;
   text-align: center;
+}
+.periodic-element .title,
+.periodic-element .description {
+  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .periodic-element:hover {
   transform: scale(1.10);
   z-index: 10;
 }
-
 .periodic-element:hover .periodic-element-inner {
   background: transparent;
 }
-
 .periodic-element:hover .title,
 .periodic-element:hover .description {
   -webkit-text-fill-color: var(--main-bg-color);
@@ -114,48 +128,10 @@ a {
   width: var(--width);
   z-index: 10;
 }
-
 .periodic-element:hover:after {
   opacity: 1;
   top: 101%;
 }
-
-
-.social-media {
-  --start-color: #ff616d;
-  --end-color: #ffc171;
-}
-
-.personal-info {
-  --start-color: #37cfdc;
-  --end-color: #5a88e5;
-}
-
-.software-projects {
-  --start-color: #58ac30;
-  --end-color: #a7df62;
-}
-
-.social-media,
-.personal-info,
-.software-projects {
-  background: linear-gradient(to bottom right,
-      var(--start-color) 0%,
-      var(--end-color) 100%);
-}
-
-.social-media .title,
-.social-media .description,
-.personal-info .title,
-.personal-info .description,
-.software-projects .title,
-.software-projects .description {
-  background: -webkit-linear-gradient(var(--start-color), var(--end-color));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 
 .legend {
   display: inline-flex;
@@ -165,11 +141,9 @@ a {
   text-align: center;
   width: 100%;
 }
-
 .legend-element {
   margin: 0 0.75em;
 }
-
 .legend-marker {
   --marker-size: 1.5em;
 
@@ -178,7 +152,6 @@ a {
   vertical-align: middle;
   width: var(--marker-size);
 }
-
 .legend-text {
   vertical-align: middle;
 }
