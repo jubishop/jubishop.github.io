@@ -1,3 +1,9 @@
+:root {
+  --animation-time: 0.5s;
+  --cubic-bezier: cubic-bezier(0.25, 0.75, 0.5, 1.5);
+  --delay-time: 0.1s;
+}
+
 body {
   white-space: nowrap;
 }
@@ -5,21 +11,20 @@ a {
   text-decoration: none;
 }
 
-.info-icon {
+.info-icon,
+.info-icon:visited {
+  color: var(--main-text-color);
   font-size: 2em;
   left: 0;
   margin: 0.5em;
   position: absolute;
   top: 0;
-  cursor: help;
 }
 .info-content {
-  --animation-time: 0.5s;
-  --delay-time: 0.1s;
-  font-size: 1em;
   background: var(--main-text-color);
   border-radius: 1em;
   color: var(--main-bg-color);
+  font-size: 1em;
   left: 1em;
   opacity: 0;
   padding: 1em;
@@ -27,13 +32,13 @@ a {
   position: absolute;
   top: 0.5em;
   transition: opacity var(--animation-time) ease var(--delay-time),
-              left var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
+              left var(--animation-time) var(--cubic-bezier) var(--delay-time);
   z-index: 10;
 }
 .info-icon:hover + .info-content,
 .info-content:hover {
-  opacity: 1;
   left: 2.5em;
+  opacity: 1;
   pointer-events: auto;
 }
 
@@ -51,7 +56,6 @@ h5 {
 }
 
 .periodic-table {
-  --animation-time: 0.5s;
   --border-radius: 0.5em;
   --element-border: 0.33em;
   --element-size: 8em;
@@ -140,7 +144,6 @@ h5 {
 }
 
 .periodic-element:after {
-  --delay-time: 0.1s;
   --description: 1em;
   --horizontal-padding: 1em;
   --width: 10em;
@@ -160,7 +163,7 @@ h5 {
   text-align: center;
   top: 50%;
   transition: opacity var(--animation-time) ease var(--delay-time),
-              top var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
+              top var(--animation-time) var(--cubic-bezier) var(--delay-time);
   width: var(--width);
   z-index: 10;
 }
