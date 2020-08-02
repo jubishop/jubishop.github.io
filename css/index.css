@@ -113,6 +113,7 @@ a {
   --width: 10em;
 
   background: var(--main-text-color);
+  border: 1px solid var(--main-bg-color);
   border-radius: var(--border-radius);
   color: var(--main-bg-color);
   content: attr(data-description);
@@ -121,9 +122,10 @@ a {
   left: calc(((var(--element-size) - var(--width)) / 2) - var(--horizontal-padding));
   opacity: 0;
   padding: 0.5em var(--horizontal-padding);
+  pointer-events: none;
   position: absolute;
   text-align: center;
-  top: 75%;
+  top: 50%;
   transition: opacity var(--animation-time) ease var(--delay-time),
     top var(--animation-time) cubic-bezier(0.25, 0.75, 0.5, 1.5) var(--delay-time);
   width: var(--width);
@@ -131,7 +133,8 @@ a {
 }
 .periodic-element:hover:after {
   opacity: 1;
-  top: 101%;
+  pointer-events: auto;
+  top: 100%;
 }
 
 .legend {
