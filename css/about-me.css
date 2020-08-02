@@ -131,7 +131,6 @@ h1 {
   border-top: var(--separator-thickness) solid var(--vertical-line-color);
   margin: var(--period-padding) 0;
   position: relative;
-  white-space: nowrap;
   width: 100%;
 }
 
