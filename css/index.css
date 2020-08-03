@@ -25,13 +25,13 @@ a {
   border-radius: 0 1rem 1rem 0;
   color: var(--main-bg-color);
   content: attr(href);
-  font-size: 1rem;
+  font: 400 1rem "Fira Sans";
   left: calc(1.5rem + 1px);
   opacity: 0;
   padding: 0.5rem 1rem;
   pointer-events: none;
   position: absolute;
-  top: calc(0.25rem + 1px);
+  top: 0.15rem;
   transition: opacity var(--animation-time) ease var(--delay-time),
               width var(--animation-time) ease var(--delay-time);
   width: 0;
@@ -43,13 +43,13 @@ a {
 }
 
 h1 {
-  font: 700 3em "Fira Sans", sans-serif;
+  font: 700 3em "Fira Sans";
   margin-bottom: 0;
   margin-top: 1em;
   text-align: center;
 }
 h5 {
-  font: 500 2em "Fira Sans", sans-serif;
+  font: 500 2em "Fira Sans";
   margin-bottom: 1em;
   margin-top: 0.25em;
   text-align: center;
@@ -114,12 +114,12 @@ h5 {
 }
 
 .periodic-element .title {
-  font: 700 4em "Fira Mono", sans-serif;
+  font: 700 4em "Fira Mono";
   padding-top: 0.25em;
   text-align: center;
 }
 .periodic-element .description {
-  font: 500 1em "Fira Sans", sans-serif;
+  font: 500 1em "Fira Sans";
   padding-top: 0.1em;
   text-align: center;
 }
@@ -175,7 +175,7 @@ h5 {
 
 .legend {
   display: inline-flex;
-  font-size: 1.5em;
+  font: 400 1.5em "Fira Sans";
   justify-content: center;
   margin: 1em auto 0;
   text-align: center;
