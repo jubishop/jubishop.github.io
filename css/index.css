@@ -1,7 +1,5 @@
 :root {
-  --animation-time: 0.5s;
   --cubic-bezier: cubic-bezier(0.25, 0.75, 0.5, 1.5);
-  --delay-time: 0.1s;
 }
 
 body {
@@ -16,14 +14,12 @@ h1 {
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 1em;
-  text-align: center;
 }
 h3 {
   font-size: 2em;
   font-weight: 500;
   margin-bottom: 1em;
   margin-top: 0.25em;
-  text-align: center;
 }
 
 .periodic-table {

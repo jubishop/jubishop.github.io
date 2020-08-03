@@ -1,12 +1,17 @@
 :root {
+  --animation-time: 0.5s;
+  --delay-time: 0.1s;
   --main-bg-color: #111;
   --main-text-color: #eee;
 }
 
 body {
   background: var(--main-bg-color);
-  font-family: "Fira Sans", sans-serif;
   color: var(--main-text-color);
+  font-family: "Fira Sans", sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  text-align: center;
 }
 
 .info,
