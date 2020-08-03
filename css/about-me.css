@@ -1,11 +1,9 @@
-:root {
+.timeline {
   --dot-size: 1em;
   --dot-margin: 0.5em;
   --vertical-line-color: white;
   --vertical-line-width: 0.2em;
-}
 
-.timeline {
   list-style: none;
   margin: 0;
   padding: 1em;
@@ -152,7 +150,7 @@
 
 /* MEDIUM SCREENS */
 @media (min-width: 769px) {
-  :root {
+  .timeline {
     --grid-gap: 2em;
     --left-column-width: 8em;
   }
