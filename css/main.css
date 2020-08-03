@@ -5,6 +5,37 @@
 
 body {
   background: var(--main-bg-color);
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   color: var(--main-text-color);
+}
+
+.info,
+.info:visited {
+  color: var(--main-text-color);
+  font-size: 2.5em;
+  left: 0;
+  margin: 0.5em;
+  position: absolute;
+  top: 0;
+}
+.info:after {
+  background: var(--main-text-color);
+  border-radius: 0 1rem 1rem 0;
+  color: var(--main-bg-color);
+  content: attr(href);
+  font: 400 1rem "Fira Sans", sans-serif;
+  left: calc(1.5rem + 1px);
+  opacity: 0;
+  padding: 0.5rem 1rem;
+  pointer-events: none;
+  position: absolute;
+  top: 0.125rem;
+  transition: opacity var(--animation-time) ease var(--delay-time),
+              width var(--animation-time) ease var(--delay-time);
+  width: 0;
+}
+.info:hover:after {
+  opacity: 1;
+  pointer-events: auto;
+  width: 20rem;
 }

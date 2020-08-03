@@ -11,45 +11,16 @@ a {
   text-decoration: none;
 }
 
-.info,
-.info:visited {
-  color: var(--main-text-color);
-  font-size: 2.5em;
-  left: 0;
-  margin: 0.5em;
-  position: absolute;
-  top: 0;
-}
-.info:after {
-  background: var(--main-text-color);
-  border-radius: 0 1rem 1rem 0;
-  color: var(--main-bg-color);
-  content: attr(href);
-  font: 400 1rem "Fira Sans";
-  left: calc(1.5rem + 1px);
-  opacity: 0;
-  padding: 0.5rem 1rem;
-  pointer-events: none;
-  position: absolute;
-  top: 0.15rem;
-  transition: opacity var(--animation-time) ease var(--delay-time),
-              width var(--animation-time) ease var(--delay-time);
-  width: 0;
-}
-.info:hover:after {
-  opacity: 1;
-  pointer-events: auto;
-  width: 20rem;
-}
-
 h1 {
-  font: 700 3em "Fira Sans";
+  font-size: 3em;
+  font-weight: 700;
   margin-bottom: 0;
   margin-top: 1em;
   text-align: center;
 }
 h5 {
-  font: 500 2em "Fira Sans";
+  font-size: 2em;
+  font-weight: 500;
   margin-bottom: 1em;
   margin-top: 0.25em;
   text-align: center;
@@ -114,12 +85,12 @@ h5 {
 }
 
 .periodic-element .title {
-  font: 700 4em "Fira Mono";
+  font: 700 4em "Fira Mono", monospace;
   padding-top: 0.25em;
   text-align: center;
 }
 .periodic-element .description {
-  font: 500 1em "Fira Sans";
+  font-weight: 500;
   padding-top: 0.1em;
   text-align: center;
 }
@@ -175,7 +146,7 @@ h5 {
 
 .legend {
   display: inline-flex;
-  font: 400 1.5em "Fira Sans";
+  font-size: 1.5em;
   justify-content: center;
   margin: 1em auto 0;
   text-align: center;
