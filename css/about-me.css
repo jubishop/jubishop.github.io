@@ -147,6 +147,28 @@
   height: calc(var(--period-padding) - var(--dot-margin));
 }
 
+/* FONT AWESOME ICONS */
+h2 .fad {
+  font-size: 2em;
+  --fa-primary-opacity: 1.0;
+  --fa-secondary-opacity: 1.0;
+}
+.fa-child {
+  --fa-primary-color: teal;
+  --fa-secondary-color: orange;
+}
+.fa-school {
+  --fa-primary-color: teal;
+  --fa-secondary-color: red;
+}
+.fa-dragon {
+  --fa-primary-color: teal;
+  --fa-secondary-color: red;
+}
+.fa-game-console-handheld {
+  --fa-primary-color: teal;
+  --fa-secondary-color: orange;
+}
 
 /* MEDIUM SCREENS */
 @media (min-width: 769px) {
