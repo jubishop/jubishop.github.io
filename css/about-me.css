@@ -175,7 +175,7 @@ h2 .fad {
 }
 
 /* MEDIUM SCREENS */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .timeline {
     --grid-gap: 2em;
     --left-column-width: 8em;
@@ -212,7 +212,7 @@ h2 .fad {
 
 
 /* WIDE SCREENS */
-@media (min-width: 1025px) {
+@media (min-width: 1981px) {
   .timeline-item {
     grid-template-columns: 50% 50%;
     width: calc(100% - var(--grid-gap));
