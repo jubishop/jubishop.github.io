@@ -24,10 +24,6 @@ body {
   right: 0;
   top: 0;
 }
-.github {
-  left: 0;
-  top: 1.5em;
-}
 
 @media (pointer: fine) {
   .header-icon {
