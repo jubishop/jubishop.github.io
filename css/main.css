@@ -13,6 +13,18 @@ body {
 h1, h2, h3, h4, h5 {
   text-align: center;
 }
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  margin-top: 0.25em;
+}
 
 .info,
 .info:visited {
@@ -35,7 +47,7 @@ h1, h2, h3, h4, h5 {
   padding: 0.5rem 1rem;
   pointer-events: none;
   position: absolute;
-  top: 0.125rem;
+  top: 0.1rem;
   transition: opacity var(--animation-time) ease var(--delay-time),
               width var(--animation-time) ease var(--delay-time);
   width: 0;
