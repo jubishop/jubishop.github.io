@@ -27,15 +27,23 @@ h3 {
 }
 
 .info,
-.info:visited {
+.info:visited,
+.home,
+.home:visited {
   color: var(--main-text-color);
   font-size: 2.5em;
-  left: 0;
   margin: 0.5em;
   position: absolute;
   text-decoration: none;
   top: 0;
 }
+.info {
+  left: 0;
+}
+.home {
+  right: 0;
+}
+
 .info:after {
   background: var(--main-text-color);
   border-radius: 0 1rem 1rem 0;
