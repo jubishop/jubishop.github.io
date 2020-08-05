@@ -5,9 +5,27 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  margin-top: 0.25em;
+}
+h1, h3 {
+  text-align: center;
+}
+
 .periodic-table {
+  --animation-time: 0.5s;
   --border-radius: 0.5em;
   --cubic-bezier: cubic-bezier(0.25, 0.75, 0.5, 1.5);
+  --delay-time: 0.1s;
   --element-border: 0.33em;
   --element-size: 8em;
 

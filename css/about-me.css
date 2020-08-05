@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 .timeline {
   --dot-size: 1em;
   --dot-margin: 0.5em;
