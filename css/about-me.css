@@ -155,9 +155,10 @@ h1 {
 
 /* FONT AWESOME ICONS */
 h2 .fad {
-  font-size: 2em;
   --fa-primary-opacity: 1.0;
   --fa-secondary-opacity: 1.0;
+
+  font-size: 2em;
 }
 .fa-child {
   --fa-primary-color: teal;
