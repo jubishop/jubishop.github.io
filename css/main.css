@@ -14,8 +14,6 @@ body {
 .home,
 .home:visited {
   color: var(--main-text-color);
-  font-size: 2.5em;
-  margin: 0.5em;
   position: absolute;
   text-decoration: none;
   top: 0;
@@ -25,4 +23,23 @@ body {
 }
 .home {
   right: 0;
+}
+
+@media (pointer: fine) {
+  .info,
+  .info:visited,
+  .home,
+  .home:visited {
+    font-size: 2.5em;
+    margin: 0.5em;
+  }
+}
+@media (pointer: coarse) {
+  .info,
+  .info:visited,
+  .home,
+  .home:visited {
+    font-size: 4em;
+    margin: 1em;
+  }
 }
