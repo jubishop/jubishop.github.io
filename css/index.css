@@ -64,7 +64,7 @@ h1, h3 {
   width: calc(100% - var(--element-border) * 2);
   z-index: 2;
 }
-@media (hover:hover) {
+@media (hover: hover) {
   .periodic-element-image:hover {
     border: 0.1em solid #fff;
     border-radius: var(--border-radius);
@@ -102,7 +102,7 @@ h1, h3 {
   -webkit-text-fill-color: transparent;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .periodic-element:hover {
     transform: scale(1.10);
     z-index: 10;
