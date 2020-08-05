@@ -80,8 +80,10 @@ h1 {
 .flickity-button {
   background: #666;
 }
-.flickity-button:hover {
-  background: #F90;
+@media (any-hover:hover) {
+  .flickity-button:hover {
+    background: #F90;
+  }
 }
 .flickity-button-icon {
   fill: white;

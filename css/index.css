@@ -64,11 +64,13 @@ h1, h3 {
   width: calc(100% - var(--element-border) * 2);
   z-index: 2;
 }
-.periodic-element-image:hover {
-  border: 0.1em solid #fff;
-  border-radius: var(--border-radius);
-  transform: scale(1.6);
-  z-index: 10;
+@media (any-hover:hover) {
+  .periodic-element-image:hover {
+    border: 0.1em solid #fff;
+    border-radius: var(--border-radius);
+    transform: scale(1.6);
+    z-index: 10;
+  }
 }
 
 .periodic-element {
@@ -100,46 +102,48 @@ h1, h3 {
   -webkit-text-fill-color: transparent;
 }
 
-.periodic-element:hover {
-  transform: scale(1.10);
-  z-index: 10;
-}
-.periodic-element:hover .periodic-element-inner {
-  background: transparent;
-}
-.periodic-element:hover .title,
-.periodic-element:hover .description {
-  -webkit-text-fill-color: var(--main-bg-color);
-}
+@media (any-hover:hover) {
+  .periodic-element:hover {
+    transform: scale(1.10);
+    z-index: 10;
+  }
+  .periodic-element:hover .periodic-element-inner {
+    background: transparent;
+  }
+  .periodic-element:hover .title,
+  .periodic-element:hover .description {
+    -webkit-text-fill-color: var(--main-bg-color);
+  }
 
-.periodic-element:after {
-  --description: 1em;
-  --horizontal-padding: 1em;
-  --width: 10em;
+  .periodic-element:after {
+    --description: 1em;
+    --horizontal-padding: 1em;
+    --width: 10em;
 
-  background: var(--main-text-color);
-  border: 1px solid var(--main-bg-color);
-  border-radius: var(--border-radius);
-  color: var(--main-bg-color);
-  content: attr(data-description);
-  font-size: var(--description);
-  height: auto;
-  left: calc(((var(--element-size) - var(--width)) / 2) - var(--horizontal-padding));
-  opacity: 0;
-  padding: 0.5em var(--horizontal-padding);
-  pointer-events: none;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transition: opacity var(--animation-time) ease var(--delay-time),
-              top var(--animation-time) var(--cubic-bezier) var(--delay-time);
-  width: var(--width);
-  z-index: 10;
-}
-.periodic-element:hover:after {
-  opacity: 1;
-  pointer-events: auto;
-  top: 100%;
+    background: var(--main-text-color);
+    border: 1px solid var(--main-bg-color);
+    border-radius: var(--border-radius);
+    color: var(--main-bg-color);
+    content: attr(data-description);
+    font-size: var(--description);
+    height: auto;
+    left: calc(((var(--element-size) - var(--width)) / 2) - var(--horizontal-padding));
+    opacity: 0;
+    padding: 0.5em var(--horizontal-padding);
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transition: opacity var(--animation-time) ease var(--delay-time),
+                top var(--animation-time) var(--cubic-bezier) var(--delay-time);
+    width: var(--width);
+    z-index: 10;
+  }
+  .periodic-element:hover:after {
+    opacity: 1;
+    pointer-events: auto;
+    top: 100%;
+  }
 }
 
 .legend {
