@@ -134,7 +134,7 @@ h1 {
   width: 100%;
 }
 
-.timeline-period:before,
+.timeline-period:not(:first-child):before,
 .timeline-period:after {
   background: var(--vertical-line-color);
   content: "";
@@ -143,14 +143,14 @@ h1 {
   width: var(--vertical-line-width);
 }
 
-.timeline-period:before {
-  height: var(--period-padding);
+.timeline-period:not(:first-child):before {
+  height: calc(var(--period-padding) + 1px);
   top: calc(var(--period-padding) * -1 - var(--separator-thickness));
 }
 
 .timeline-period:after {
   bottom: calc(var(--period-padding) * -1 + var(--dot-margin) - var(--separator-thickness));
-  height: calc(var(--period-padding) - var(--dot-margin));
+  height: calc(var(--period-padding) - var(--dot-margin) + 1px);
 }
 
 /* FONT AWESOME ICONS */
@@ -259,7 +259,7 @@ h2 .fad {
     width: 100%;
   }
 
-  .timeline-period:before,
+  .timeline-period:not(:first-child):before,
   .timeline-period:after {
     left: calc(50% - var(--vertical-line-width) / 2);
   }
