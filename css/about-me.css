@@ -2,11 +2,9 @@ h1 {
   text-align: center;
 }
 
-a:link {
-  color: orange;
-}
+a:link,
 a:visited {
-  color: red;
+  color: orange;
 }
 a:hover {
   color: hotpink;
