@@ -165,6 +165,14 @@ a:active {
 }
 
 /* FONT AWESOME ICONS */
+@keyframes pulse {
+  0% {
+      transform: scale(1.0) translate(0em, 0em);
+  }
+  100% {
+      transform: scale(2) translate(0em, -0.1em);
+  }
+}
 h2 .fad {
   --fa-primary-opacity: 1.0;
   --fa-secondary-opacity: 1.0;
@@ -186,6 +194,13 @@ h2 .fad {
 .fa-game-console-handheld {
   --fa-primary-color: teal;
   --fa-secondary-color: orange;
+}
+.fa-facebook-f {
+  color: #4267B2;
+}
+.fa-heart {
+  color: red;
+  animation: pulse 1s ease-in-out infinite alternate;
 }
 
 /* MEDIUM SCREENS */
