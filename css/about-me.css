@@ -204,6 +204,10 @@ h2 .fas {
   color: red;
   animation: pulse 1s ease-in-out infinite alternate;
 }
+.fa-plane-departure {
+  --fa-primary-color: orange;
+  --fa-secondary-color: brown;
+}
 
 /* MEDIUM SCREENS */
 @media (min-width: 40em) {
