@@ -210,7 +210,7 @@ h2 .fas {
 }
 
 /* MEDIUM SCREENS */
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   .timeline {
     --grid-gap: 2em;
     --left-column-width: 8em;
@@ -247,7 +247,7 @@ h2 .fas {
 
 
 /* WIDE SCREENS */
-@media (min-width: 64em) {
+@media (min-width: 1024px) {
   .timeline-item {
     grid-template-columns: 50% 50%;
     width: calc(100% - var(--grid-gap));
