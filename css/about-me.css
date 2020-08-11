@@ -208,6 +208,13 @@ h2 .fas {
   --fa-primary-color: orange;
   --fa-secondary-color: brown;
 }
+.fa-house-leave {
+  --fa-primary-color: orange;
+  --fa-secondary-color: brown;
+}
+.fa-google {
+  color: #4285F4;
+}
 
 /* MEDIUM SCREENS */
 @media (min-width: 768px) {
