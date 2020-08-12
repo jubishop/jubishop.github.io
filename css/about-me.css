@@ -28,13 +28,18 @@ a:active {
 }
 
 .timeline-item:before {
-  background: #900;
-  border-radius: 100%;
-  content: "";
-  height: var(--dot-size);
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f21e";
+
   left: 0;
   position: absolute;
-  width: var(--dot-size);
 }
 
 .timeline-item:after {
@@ -219,6 +224,10 @@ h2 .fas {
     --left-column-width: 8em;
   }
 
+  .timeline-item:before {
+    content: "\f101";
+  }
+
   .timeline-item {
     display: grid;
     gap: var(--grid-gap);
@@ -254,6 +263,10 @@ h2 .fas {
   .timeline-item {
     grid-template-columns: 50% 50%;
     width: calc(100% - var(--grid-gap));
+  }
+
+  .timeline-item:nth-of-type(odd):before {
+    content: "\f100";
   }
 
   .timeline-item:nth-of-type(even) {
