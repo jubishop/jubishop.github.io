@@ -6,8 +6,6 @@ a {
 }
 
 h1 {
-  font-size: 3em;
-  font-weight: 700;
   margin-bottom: 0;
   margin-top: 1em;
 }
@@ -16,8 +14,6 @@ h3 {
   font-weight: 500;
   margin-bottom: 1em;
   margin-top: 0.25em;
-}
-h1, h3 {
   text-align: center;
 }
 

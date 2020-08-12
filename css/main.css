@@ -9,6 +9,11 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
 .header-icon,
 .header-icon:visited {
   color: var(--main-text-color);
