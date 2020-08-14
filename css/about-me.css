@@ -56,6 +56,7 @@ a:active {
 
 .timeline-date {
   text-transform: uppercase;
+  font-size: 1.5em;
 }
 
 .timeline-content {
@@ -262,6 +263,11 @@ h2 .fas {
   .timeline-item:before {
     left: calc(((var(--left-column-width) + var(--grid-gap) / 2) - var(--dot-size) / 2) /
                var(--dot-multiplier));
+  }
+
+  .timeline-date {
+    padding-top: 0.25em;
+    font-size: 1em;
   }
 
   .timeline-period {
