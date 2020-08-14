@@ -99,11 +99,23 @@ a:active {
 .flickity-button-icon {
   fill: white;
 }
-.flickity-fullscreen-button {
-  --corner-padding: 0.5em;
-  --size: 2em;
+@media (pointer: fine) {
+  .flickity-fullscreen-button {
+    --corner-padding: 0.5em;
+    --size: 2em;
 
-  border-radius: 0.25em;
+    border-radius: 0.25em;
+  }
+}
+@media (pointer: coarse) {
+  .flickity-fullscreen-button {
+    --corner-padding: 1.5em;
+    --size: 5em;
+
+    border-radius: 0.75em;
+  }
+}
+.flickity-fullscreen-button {
   height: var(--size);
   right: var(--corner-padding);
   top: var(--corner-padding);
@@ -117,11 +129,23 @@ a:active {
   top: var(--icon-padding);
   width: calc(100% - var(--icon-padding) * 2);
 }
-.flickity-prev-next-button {
-  --edge-padding: 0.75em;
-  --size: 3em;
+@media (pointer: fine) {
+  .flickity-prev-next-button {
+    --edge-padding: 0.75em;
+    --size: 3em;
 
-  border-radius: 0.5em;
+    border-radius: 0.5em;
+  }
+}
+@media (pointer: coarse) {
+  .flickity-prev-next-button {
+    --edge-padding: 1.5em;
+    --size: 6em;
+
+    border-radius: 1em;
+  }
+}
+.flickity-prev-next-button {
   height: var(--size);
   width: var(--size);
 }
