@@ -266,7 +266,7 @@ h2 .fas {
   }
 
   .timeline-date {
-    padding-top: 0.25em;
+    padding-top: calc((var(--dot-size) - 1em) / 2);
     font-size: 1em;
   }
 
