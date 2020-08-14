@@ -10,11 +10,11 @@ a:active {
 }
 
 .timeline {
-  --dot-size: 1em;
+  --dot-size: 1.6em;
+  --dot-multiplier: 1.6; /* must match --dot-size */
   --dot-margin: 0.5em;
   --vertical-line-color: white;
   --vertical-line-width: 0.2em;
-  --timeline-icon-multiplier: 1.5;
 
   list-style: none;
   margin: 0;
@@ -35,13 +35,12 @@ a:active {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 
-  font-size: calc(var(--timeline-icon-multiplier) * 1rem);
+  font-size: var(--dot-size);
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   content: "\f21e";
 
-  top: calc((1 - var(--timeline-icon-multiplier)) / 2 * 1rem);
-  left: calc((1 - var(--timeline-icon-multiplier)) / 2 * 1rem);
+  left: 0;
   position: absolute;
 }
 
@@ -261,8 +260,8 @@ h2 .fas {
   }
 
   .timeline-item:before {
-    left: calc((var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2) /
-               var(--timeline-icon-multiplier) - 0.25rem);
+    left: calc(((var(--left-column-width) + var(--grid-gap) / 2) - var(--dot-size) / 2) /
+               var(--dot-multiplier));
   }
 
   .timeline-period {
@@ -313,12 +312,8 @@ h2 .fas {
     grid-template-areas: "content date";
   }
 
-  .timeline-item:nth-of-type(odd):before {
-    left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2 - 0.5rem);
-  }
-
-  .timeline-item:nth-of-type(even):before {
-    left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2 - 0.75rem);
+  .timeline-item:before {
+    left: calc(50% + (var(--grid-gap) / 2 - var(--dot-size) / 2) / var(--dot-multiplier));
   }
 
   .timeline-item:after {
