@@ -60,7 +60,7 @@ a:active {
 }
 
 .timeline-content {
-  padding: 1em 0;
+  padding-bottom: 1em;
 }
 
 .timeline-content h3,
