@@ -14,6 +14,7 @@ a:active {
   --dot-margin: 0.5em;
   --vertical-line-color: white;
   --vertical-line-width: 0.2em;
+  --timeline-icon-multiplier: 1.5;
 
   list-style: none;
   margin: 0;
@@ -34,11 +35,13 @@ a:active {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 
+  font-size: calc(var(--timeline-icon-multiplier) * 1rem);
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   content: "\f21e";
 
-  left: 0;
+  top: calc((1 - var(--timeline-icon-multiplier)) / 2 * 1rem);
+  left: calc((1 - var(--timeline-icon-multiplier)) / 2 * 1rem);
   position: absolute;
 }
 
@@ -242,7 +245,7 @@ h2 .fas {
 /* MEDIUM SCREENS */
 @media only screen and (min-width: 768px) {
   .timeline {
-    --grid-gap: 2em;
+    --grid-gap: 3em;
     --left-column-width: 8em;
   }
 
@@ -257,7 +260,11 @@ h2 .fas {
     padding: 0;
   }
 
-  .timeline-item:before,
+  .timeline-item:before {
+    left: calc((var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2) /
+               var(--timeline-icon-multiplier) - 0.25rem);
+  }
+
   .timeline-period {
     left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
@@ -306,8 +313,12 @@ h2 .fas {
     grid-template-areas: "content date";
   }
 
-  .timeline-item:before {
-    left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2);
+  .timeline-item:nth-of-type(odd):before {
+    left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2 - 0.5rem);
+  }
+
+  .timeline-item:nth-of-type(even):before {
+    left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2 - 0.75rem);
   }
 
   .timeline-item:after {
