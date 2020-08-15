@@ -248,28 +248,25 @@ h2 .fas {
   --fa-primary-color: orange;
   --fa-secondary-color: brown;
 }
-.google-wrapper {
+.fa-google {
   --google-red: rgb(219,68,55);
   --google-yellow: rgb(244,160,0);
   --google-green: rgb(15,157,88);
   --google-blue: rgb(66,133,244);
-
-  display: inline;
-}
-.google-wrapper .fa-google {
   animation: google-gradient 4s ease-in-out infinite;
-  background: -webkit-linear-gradient(-45deg,
+  background: linear-gradient(
+                  -45deg,
                   var(--google-blue) 0%,
-                  var(--google-blue) 28%,
-                  var(--google-red) 28%,
-                  var(--google-red) 48%,
-                  var(--google-yellow) 48%,
-                  var(--google-yellow) 68%,
-                  var(--google-green) 68%,
-                  var(--google-green) 100%);
+                  var(--google-blue) 31.5%,
+                  var(--google-yellow) 31.5%,
+                  var(--google-yellow) 51.5%,
+                  var(--google-green) 51.5%,
+                  var(--google-green) 71.5%,
+                  var(--google-red) 71.5%,
+                  var(--google-red) 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  background-size: 420%;
+  background-size: 400%;
   padding: 1px;
   -webkit-text-fill-color: transparent;
 }
