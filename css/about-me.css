@@ -257,12 +257,12 @@ h2 .fas {
   background: linear-gradient(
                   -45deg,
                   var(--google-blue) 0%,
-                  var(--google-blue) 31.5%,
-                  var(--google-yellow) 31.5%,
-                  var(--google-yellow) 51.5%,
-                  var(--google-green) 51.5%,
-                  var(--google-green) 71.5%,
-                  var(--google-red) 71.5%,
+                  var(--google-blue) 32%,
+                  var(--google-yellow) 32%,
+                  var(--google-yellow) 51%,
+                  var(--google-green) 51%,
+                  var(--google-green) 70%,
+                  var(--google-red) 70%,
                   var(--google-red) 100%);
   background-clip: text;
   -webkit-background-clip: text;
