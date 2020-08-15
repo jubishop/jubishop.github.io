@@ -28,19 +28,19 @@ a:active {
 }
 
 .timeline-item:before {
+  content: "\f21e";
   display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Pro";
 
   font-size: var(--dot-size);
-  font-family: "Font Awesome 5 Pro";
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
   font-weight: 900;
-  content: "\f21e";
 
   left: 0;
   position: absolute;
+  text-rendering: auto;
 }
 
 .timeline-item:after {
@@ -54,8 +54,8 @@ a:active {
 }
 
 .timeline-date {
-  text-transform: uppercase;
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 .timeline-content {
@@ -226,8 +226,8 @@ h2 .fas {
   color: #4267B2;
 }
 .fa-heart {
-  color: red;
   animation: pulse 1s ease-in-out infinite alternate;
+  color: red;
 }
 .fa-plane-departure {
   --fa-primary-color: orange;
@@ -238,7 +238,28 @@ h2 .fas {
   --fa-secondary-color: brown;
 }
 .fa-google {
-  color: #4285F4;
+  --google-red: rgb(219,68,55);
+  --google-yellow: rgb(244,160,0);
+  --google-green: rgb(15,157,88);
+  --google-blue: rgb(66,133,244);
+
+  animation: gradient-fade 6s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 1px;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-fade {
+  0%   { background-color: var(--google-red);  }
+  20%  { background-color: var(--google-red);  }
+  25%  { background-color: var(--google-yellow);  }
+  45%  { background-color: var(--google-yellow);  }
+  50%  { background-color: var(--google-green);  }
+  70%  { background-color: var(--google-green);  }
+  75%  { background-color: var(--google-blue); }
+  95%  { background-color: var(--google-blue); }
+  100% { background-color: var(--google-red);  }
 }
 
 /* MEDIUM SCREENS */
@@ -264,8 +285,8 @@ h2 .fas {
   }
 
   .timeline-date {
-    padding-top: calc((var(--dot-size) - 1em) / 2);
     font-size: 1em;
+    padding-top: calc((var(--dot-size) - 1em) / 2);
   }
 
   .timeline-period {
