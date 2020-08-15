@@ -191,15 +191,15 @@ a:active {
 
 /* FONT AWESOME ICONS */
 @keyframes google-gradient {
-  0%   { background-color: var(--google-red);    }
-  20%  { background-color: var(--google-red);    }
-  25%  { background-color: var(--google-yellow); }
-  45%  { background-color: var(--google-yellow); }
-  50%  { background-color: var(--google-green);  }
-  70%  { background-color: var(--google-green);  }
-  75%  { background-color: var(--google-blue);   }
-  95%  { background-color: var(--google-blue);   }
-  100% { background-color: var(--google-red);    }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 @keyframes pulse {
   0% {
@@ -248,15 +248,28 @@ h2 .fas {
   --fa-primary-color: orange;
   --fa-secondary-color: brown;
 }
-.fa-google {
+.google-wrapper {
   --google-red: rgb(219,68,55);
   --google-yellow: rgb(244,160,0);
   --google-green: rgb(15,157,88);
   --google-blue: rgb(66,133,244);
 
-  animation: google-gradient 6s ease-in-out infinite;
+  display: inline;
+}
+.google-wrapper .fa-google {
+  animation: google-gradient 4s ease-in-out infinite;
+  background: -webkit-linear-gradient(-45deg,
+                  var(--google-blue) 0%,
+                  var(--google-blue) 28%,
+                  var(--google-red) 28%,
+                  var(--google-red) 48%,
+                  var(--google-yellow) 48%,
+                  var(--google-yellow) 68%,
+                  var(--google-green) 68%,
+                  var(--google-green) 100%);
   background-clip: text;
   -webkit-background-clip: text;
+  background-size: 420%;
   padding: 1px;
   -webkit-text-fill-color: transparent;
 }
