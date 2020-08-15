@@ -10,15 +10,14 @@ a:active {
 }
 
 .timeline {
-  --dot-size: 1.6em;
-  --dot-multiplier: 1.6; /* must match --dot-size */
-  --dot-margin: 0.5em;
+  --dot-size: 1.6rem;
+  --dot-margin: 0.5rem;
   --vertical-line-color: white;
-  --vertical-line-width: 0.2em;
+  --vertical-line-width: 0.2rem;
 
   list-style: none;
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
 }
 
 /* THIN (DEFAULT) CSS */
@@ -245,8 +244,8 @@ h2 .fas {
 /* MEDIUM SCREENS */
 @media only screen and (min-width: 768px) {
   .timeline {
-    --grid-gap: 3em;
-    --left-column-width: 8em;
+    --grid-gap: 3rem;
+    --left-column-width: 8rem;
   }
 
   .timeline-item:before {
@@ -261,8 +260,7 @@ h2 .fas {
   }
 
   .timeline-item:before {
-    left: calc(((var(--left-column-width) + var(--grid-gap) / 2) - var(--dot-size) / 2) /
-               var(--dot-multiplier));
+    left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
 
   .timeline-date {
@@ -319,7 +317,7 @@ h2 .fas {
   }
 
   .timeline-item:before {
-    left: calc(50% + (var(--grid-gap) / 2 - var(--dot-size) / 2) / var(--dot-multiplier));
+    left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
 
   .timeline-item:after {
