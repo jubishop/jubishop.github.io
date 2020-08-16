@@ -11,7 +11,7 @@ a:active {
 
 .timeline {
   --dot-size: 1.6rem;
-  --dot-margin: 0.5rem;
+  --dot-margin: 0.6rem;
   --vertical-line-color: white;
   --vertical-line-width: 0.2rem;
 
@@ -55,14 +55,18 @@ a:active {
 
 .timeline-date {
   font-size: 1.5em;
+  font-family: 'Pangolin', cursive;
   text-transform: uppercase;
 }
 
 .timeline-content {
-  padding-bottom: 1em;
+  padding-bottom: 2.5em;
 }
-
-.timeline-content h3,
+.timeline-content h3 {
+  font-size: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0.5rem;
+}
 .timeline-content p {
   margin: 0;
 }
@@ -70,7 +74,7 @@ a:active {
 /* FLICKITY */
 .carousel {
   background: #333;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   margin-top: calc(var(--dot-size) / 2);
 }
 .carousel-cell {
@@ -294,7 +298,7 @@ h2 .fas {
   }
 
   .timeline-date {
-    font-size: 1em;
+    font-size: 1.3em;
     padding-top: calc((var(--dot-size) - 1em) / 2);
   }
 
@@ -356,6 +360,7 @@ h2 .fas {
 
   .timeline-date {
     grid-area: date;
+    font-size: 1.5em;
   }
 
   .timeline-content {
