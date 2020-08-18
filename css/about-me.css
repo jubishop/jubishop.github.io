@@ -27,7 +27,15 @@ a:active {
   position: relative;
 }
 
+@keyframes heart-pulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  60% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
 .timeline-item:before {
+  animation: heart-pulse 1s ease-in-out infinite alternate;
   content: "\f21e";
   display: inline-block;
   font-family: "Font Awesome 5 Pro";
@@ -54,8 +62,8 @@ a:active {
 }
 
 .timeline-date {
-  font-size: 1.5em;
   font-family: 'Pangolin', cursive;
+  font-size: 1.5em;
   text-transform: uppercase;
 }
 
@@ -64,8 +72,8 @@ a:active {
 }
 .timeline-content h3 {
   font-size: 1.5em;
-  margin-top: 0em;
   margin-bottom: 0.5rem;
+  margin-top: 0em;
 }
 .timeline-content p {
   margin: 0;
@@ -221,16 +229,12 @@ h2 .fas {
 .fa-facebook {
   color: #4267B2;
 }
-@keyframes heart-pulse {
-  0% {
-    transform: scale(1) translate(0em, 0em);
-  }
-  100% {
-    transform: scale(2) translate(0em, -0.1em);
-  }
+@keyframes love-throb {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(2) translate(0, -0.1em); }
 }
 .fa-heart {
-  animation: heart-pulse 1s ease-in-out infinite alternate;
+  animation: love-throb 1s ease-in-out infinite alternate;
   color: red;
 }
 .fa-plane-departure {
@@ -242,15 +246,9 @@ h2 .fas {
   --fa-secondary-color: brown;
 }
 @keyframes google-gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }
 .fa-google {
   --google-red: rgb(219,68,55);
@@ -275,15 +273,26 @@ h2 .fas {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes point-right {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(0, 0); }
+  50% { transform: translate(0.2em, 0); }
+  80% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes point-left {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(0, 0); }
+  50% { transform: translate(-0.2em, 0); }
+  80% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0); }
+}
+
 /* MEDIUM SCREENS */
 @media only screen and (min-width: 768px) {
   .timeline {
     --grid-gap: 3rem;
     --left-column-width: 8rem;
-  }
-
-  .timeline-item:before {
-    content: "\f101";
   }
 
   .timeline-item {
@@ -292,8 +301,9 @@ h2 .fas {
     grid-template-columns: var(--left-column-width) auto;
     padding: 0;
   }
-
   .timeline-item:before {
+    animation-name: point-right;
+    content: "\f101";
     left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
 
@@ -330,10 +340,6 @@ h2 .fas {
     width: calc(100% - var(--grid-gap));
   }
 
-  .timeline-item:nth-of-type(odd):before {
-    content: "\f100";
-  }
-
   .timeline-item:nth-of-type(even) {
     grid-template-areas: "date content";
   }
@@ -353,14 +359,18 @@ h2 .fas {
   .timeline-item:before {
     left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
+  .timeline-item:nth-of-type(odd):before {
+    animation-name: point-left;
+    content: "\f100";
+  }
 
   .timeline-item:after {
     left: calc(50% + var(--grid-gap) / 2 - var(--vertical-line-width) / 2);
   }
 
   .timeline-date {
-    grid-area: date;
     font-size: 1.5em;
+    grid-area: date;
   }
 
   .timeline-content {
