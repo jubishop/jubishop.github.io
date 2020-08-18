@@ -202,14 +202,13 @@ a:active {
 }
 
 /* FONT AWESOME ICONS */
-h2 .fad,
-h2 .fab,
-h2 .fas {
+.fad, .fab, .fas {
   --fa-primary-opacity: 1.0;
   --fa-secondary-opacity: 1.0;
   --fa-primary-color: teal;
   --fa-secondary-color: orange;
-
+}
+h2 .fad, h2 .fab, h2 .fas {
   font-size: 2em;
 }
 .fa-facebook {
@@ -220,8 +219,11 @@ h2 .fas {
   100% { transform: scale(2) translate(0, -0.1em); }
 }
 .fa-heart {
+  --fa-primary-color: red;
+  --fa-secondary-color: red;
+  --fa-secondary-opacity: 0.6;
+
   animation: love-throb 1s ease-in-out infinite alternate;
-  color: red;
 }
 @keyframes google-gradient {
 	0% { background-position: 0% 50%; }
