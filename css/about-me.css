@@ -194,25 +194,6 @@ a:active {
 }
 
 /* FONT AWESOME ICONS */
-@keyframes google-gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1.0) translate(0em, 0em);
-  }
-  100% {
-    transform: scale(2) translate(0em, -0.1em);
-  }
-}
 h2 .fad,
 h2 .fab,
 h2 .fas {
@@ -240,8 +221,16 @@ h2 .fas {
 .fa-facebook {
   color: #4267B2;
 }
+@keyframes heart-pulse {
+  0% {
+    transform: scale(1) translate(0em, 0em);
+  }
+  100% {
+    transform: scale(2) translate(0em, -0.1em);
+  }
+}
 .fa-heart {
-  animation: pulse 1s ease-in-out infinite alternate;
+  animation: heart-pulse 1s ease-in-out infinite alternate;
   color: red;
 }
 .fa-plane-departure {
@@ -251,6 +240,17 @@ h2 .fas {
 .fa-house-leave {
   --fa-primary-color: orange;
   --fa-secondary-color: brown;
+}
+@keyframes google-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .fa-google {
   --google-red: rgb(219,68,55);
