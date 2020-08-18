@@ -12,7 +12,7 @@ a:active {
 .timeline {
   --dot-size: 1.6rem;
   --dot-margin: 0.6rem;
-  --vertical-line-color: white;
+  --line-color: orange;
   --vertical-line-width: 0.2rem;
 
   list-style: none;
@@ -52,7 +52,7 @@ a:active {
 }
 
 .timeline-item:after {
-  background: var(--vertical-line-color);
+  background: var(--line-color);
   bottom: 0;
   content: "";
   left: calc((var(--dot-size) - var(--vertical-line-width)) / 2);
@@ -175,8 +175,8 @@ a:active {
   --period-padding: 2em;
   --separator-thickness: 0.2em;
 
-  border-bottom: var(--separator-thickness) solid var(--vertical-line-color);
-  border-top: var(--separator-thickness) solid var(--vertical-line-color);
+  border-bottom: var(--separator-thickness) solid var(--line-color);
+  border-top: var(--separator-thickness) solid var(--line-color);
   margin: var(--period-padding) 0;
   position: relative;
   width: 100%;
@@ -184,7 +184,7 @@ a:active {
 
 .timeline-period:before,
 .timeline-period:after {
-  background: var(--vertical-line-color);
+  background: var(--line-color);
   content: "";
   left: calc((var(--dot-size) - var(--vertical-line-width)) / 2);
   position: absolute;
