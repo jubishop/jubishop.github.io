@@ -3,10 +3,10 @@ a:visited {
   color: orange;
 }
 a:hover {
-  color: hotpink;
+  color: teal;
 }
 a:active {
-  color: tomato;
+  color: hotpink;
 }
 
 .timeline {
@@ -81,7 +81,7 @@ a:active {
 
 /* FLICKITY */
 .carousel {
-  background: #333;
+  background: dimgrey;
   margin-bottom: 0.5em;
   margin-top: calc(var(--dot-size) / 2);
 }
@@ -103,11 +103,11 @@ a:active {
   max-width: 100%;
 }
 .flickity-button {
-  background: #666;
+  background: grey;
 }
 @media (hover: hover) {
   .flickity-button:hover {
-    background: #F90;
+    background: orange;
   }
 }
 .flickity-button-icon {
@@ -207,24 +207,10 @@ h2 .fab,
 h2 .fas {
   --fa-primary-opacity: 1.0;
   --fa-secondary-opacity: 1.0;
+  --fa-primary-color: teal;
+  --fa-secondary-color: orange;
 
   font-size: 2em;
-}
-.fa-child {
-  --fa-primary-color: teal;
-  --fa-secondary-color: orange;
-}
-.fa-school {
-  --fa-primary-color: teal;
-  --fa-secondary-color: red;
-}
-.fa-dragon {
-  --fa-primary-color: teal;
-  --fa-secondary-color: red;
-}
-.fa-game-console-handheld {
-  --fa-primary-color: teal;
-  --fa-secondary-color: orange;
 }
 .fa-facebook {
   color: #4267B2;
@@ -236,14 +222,6 @@ h2 .fas {
 .fa-heart {
   animation: love-throb 1s ease-in-out infinite alternate;
   color: red;
-}
-.fa-plane-departure {
-  --fa-primary-color: orange;
-  --fa-secondary-color: brown;
-}
-.fa-house-leave {
-  --fa-primary-color: orange;
-  --fa-secondary-color: brown;
 }
 @keyframes google-gradient {
 	0% { background-position: 0% 50%; }
