@@ -42,3 +42,53 @@ h1 {
     font-size: 4em;
   }
 }
+
+#time {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+#time + label {
+  --checked: 0;
+  --width: 6em;
+  background: hsl(200, 100%, calc((1 - var(--checked))*50%));
+  border-radius: 1.75em;
+  color: transparent;
+  cursor: pointer;
+  display: grid;
+  grid-gap: 0.5em 0.25em;
+  height: 2.5em;
+  left: 5em;
+  overflow: hidden;
+  padding: calc(var(--width) / 12);
+  position: absolute;
+  top: 1em;
+  -webkit-touch-callout: none;
+  transition: all 0.5s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  width: var(--width)
+}
+#time + label:before, #time + label:after {
+  border-radius: 100%;
+  content: "";
+  height: 2.5em;
+  position: relative;
+  transition: inherit;
+  width: 2.5em;
+}
+#time + label:before { /* sun */
+  background: #F9D71C;
+  opacity: calc(1 - var(--checked));
+  top: calc(var(--checked) * (10% + 0.5em));
+}
+#time + label:after { /* moon */
+  background: radial-gradient(circle at 25% 25%, transparent 50%, #fff 50%);
+  grid-column: 2;
+  opacity: var(--checked);
+  top: calc(-75% - 0.5em - (var(--checked) * 25%));
+}
+#time:checked + label {
+  --checked: 1;
+}
