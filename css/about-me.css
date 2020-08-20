@@ -235,6 +235,7 @@ h2 .fad, h2 .fab, h2 .fas {
   --google-yellow: rgb(244,160,0);
   --google-green: rgb(15,157,88);
   --google-blue: rgb(66,133,244);
+
   animation: google-gradient 4s ease-in-out infinite;
   background: linear-gradient(
                   -45deg,

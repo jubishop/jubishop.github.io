@@ -52,6 +52,7 @@ h1 {
 #time + label {
   --checked: 0;
   --width: 5em;
+
   background: hsl(200, 100%, calc((1 - var(--checked))*50%));
   border-radius: calc(var(--width) * 1.75 / 6);
   color: transparent;
@@ -68,7 +69,7 @@ h1 {
   transition: all 0.5s ease;
   user-select: none;
   -webkit-user-select: none;
-  width: var(--width)
+  width: var(--width);
 }
 #time + label:before, #time + label:after {
   border-radius: 100%;
