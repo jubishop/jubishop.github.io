@@ -12,12 +12,17 @@ a:active {
 .timeline {
   --dot-size: 1.6rem;
   --dot-margin: 0.6rem;
-  --line-color: orange;
   --vertical-line-width: 0.2rem;
 
   list-style: none;
   margin: 0;
   padding: 1rem;
+}
+.dark .timeline {
+  --line-color: orange;
+}
+.light .timeline {
+  --line-color: teal;
 }
 
 /* THIN (DEFAULT) CSS */

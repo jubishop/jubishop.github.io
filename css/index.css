@@ -13,6 +13,10 @@ h3 {
   text-align: center;
 }
 
+#time + label {
+  right: 1em;
+}
+
 .periodic-table {
   --animation-time: 0.5s;
   --border-radius: 0.5em;
@@ -28,18 +32,31 @@ h3 {
   justify-content: center;
 }
 
-.social-media {
+.dark .social-media {
   --start-color: #ff616d;
   --end-color: #ffc171;
 }
-.personal-info {
+.dark .personal-info {
   --start-color: #37cfdc;
   --end-color: #5a88e5;
 }
-.software-projects {
+.dark .software-projects {
   --start-color: #58ac30;
   --end-color: #a7df62;
 }
+.light .social-media {
+  --start-color: #ff616d;
+  --end-color: #ac2f3a;
+}
+.light .personal-info {
+  --start-color: #5a88e5;
+  --end-color: #2f549f;
+}
+.light .software-projects {
+  --start-color: #58ac30;
+  --end-color: #527526;
+}
+
 .social-media,
 .personal-info,
 .software-projects {
@@ -50,7 +67,7 @@ h3 {
 }
 
 .periodic-element-image {
-  border: var(--element-border) solid #fff;
+  border: var(--element-border) solid var(--main-text-color);
   height: calc(100% - var(--element-border) * 2);
   transition: all var(--animation-time) ease;
   width: calc(100% - var(--element-border) * 2);
@@ -58,7 +75,7 @@ h3 {
 }
 @media (hover: hover) {
   .periodic-element-image:hover {
-    border: 0.1em solid #fff;
+    border: 0.1em solid var(--main-text-color);
     border-radius: var(--border-radius);
     transform: scale(1.6);
     z-index: 10;
