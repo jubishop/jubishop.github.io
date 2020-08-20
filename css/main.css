@@ -51,14 +51,14 @@ h1 {
 
 #time + label {
   --checked: 0;
-  --width: 6em;
+  --width: 5em;
   background: hsl(200, 100%, calc((1 - var(--checked))*50%));
-  border-radius: 1.75em;
+  border-radius: calc(var(--width) * 1.75 / 6);
   color: transparent;
   cursor: pointer;
   display: grid;
-  grid-gap: 0.5em 0.25em;
-  height: 2.5em;
+  grid-gap: calc(var(--width) / 12) calc(var(--width) / 24);
+  height: calc(var(--width) * 2.5 / 6);
   left: 5em;
   overflow: hidden;
   padding: calc(var(--width) / 12);
@@ -73,21 +73,21 @@ h1 {
 #time + label:before, #time + label:after {
   border-radius: 100%;
   content: "";
-  height: 2.5em;
+  height: calc(var(--width) * 2.5 / 6);
   position: relative;
   transition: inherit;
-  width: 2.5em;
+  width: calc(var(--width) * 2.5 / 6);
 }
 #time + label:before { /* sun */
   background: #F9D71C;
   opacity: calc(1 - var(--checked));
-  top: calc(var(--checked) * (10% + 0.5em));
+  top: calc(var(--checked) * (10% + calc(var(--width) / 12)));
 }
 #time + label:after { /* moon */
   background: radial-gradient(circle at 25% 25%, transparent 50%, #fff 50%);
   grid-column: 2;
   opacity: var(--checked);
-  top: calc(-75% - 0.5em - (var(--checked) * 25%));
+  top: calc(-75% - calc(var(--width) / 12) - (var(--checked) * 25%));
 }
 #time:checked + label {
   --checked: 1;
