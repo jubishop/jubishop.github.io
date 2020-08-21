@@ -11,7 +11,7 @@ class DarkMode {
 
     this.updateStyles();
 
-    var elem = document.getElementById("dark_toggle");
+    const elem = document.getElementById("dark_toggle");
     elem.checked = this.getDarkMode();
     elem.addEventListener("click", () => this.toggleDarkMode());
   }
@@ -30,7 +30,7 @@ class DarkMode {
   }
 
   static updateStyles() {
-    var dark_mode = this.getDarkMode();
+    const dark_mode = this.getDarkMode();
     document.body.style.setProperty(
       "--main-bg-color",
       dark_mode ? this.DarkBG : this.LightBG);
