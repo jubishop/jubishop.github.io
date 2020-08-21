@@ -36,10 +36,19 @@ h1 {
   .header-icon {
     font-size: 2.5em;
   }
+  #time + label {
+    --width: 3em;
+    right: 5em;
+    transition: all 0.5s ease;
+  }
 }
 @media (pointer: coarse) {
   .header-icon {
     font-size: 4em;
+  }
+  #time + label {
+    --width: 5em;
+    right: 8em;
   }
 }
 
@@ -51,7 +60,6 @@ h1 {
 
 #time + label {
   --checked: 0;
-  --width: 3em;
 
   background: hsl(200, 100%, calc((1 - var(--checked))*50%));
   border-radius: calc(var(--width) * 1.75 / 6);
@@ -60,13 +68,10 @@ h1 {
   display: grid;
   grid-gap: calc(var(--width) / 12) calc(var(--width) / 24);
   height: calc(var(--width) * 2.5 / 6);
-  right: 5em;
   overflow: hidden;
   padding: calc(var(--width) / 12);
   position: absolute;
   top: calc(var(--width) / 2);
-  -webkit-touch-callout: none;
-  transition: all 0.5s ease;
   user-select: none;
   -webkit-user-select: none;
   width: var(--width);
