@@ -11,9 +11,9 @@ class DarkMode {
 
     this.updateStyles();
 
-    var time_elem = document.getElementById("time");
-    time_elem.checked = this.getDarkMode();
-    time_elem.addEventListener("click", () => this.toggleDarkMode());
+    var elem = document.getElementById("dark_toggle");
+    elem.checked = this.getDarkMode();
+    elem.addEventListener("click", () => this.toggleDarkMode());
   }
 
   static setDarkMode(dark_mode) {

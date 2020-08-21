@@ -36,7 +36,7 @@ h1 {
   .header-icon {
     font-size: 2.5em;
   }
-  #time + label {
+  #dark_toggle + label {
     --width: 3em;
     right: 5em;
     transition: all 0.5s ease;
@@ -46,19 +46,19 @@ h1 {
   .header-icon {
     font-size: 4em;
   }
-  #time + label {
+  #dark_toggle + label {
     --width: 5em;
     right: 8em;
   }
 }
 
-#time {
+#dark_toggle {
   height: 0;
   opacity: 0;
   width: 0;
 }
 
-#time + label {
+#dark_toggle + label {
   --checked: 0;
 
   background: hsl(200, 100%, calc((1 - var(--checked))*50%));
@@ -76,7 +76,7 @@ h1 {
   -webkit-user-select: none;
   width: var(--width);
 }
-#time + label:before, #time + label:after {
+#dark_toggle + label:before, #dark_toggle + label:after {
   border-radius: 100%;
   content: "";
   height: calc(var(--width) * 2.5 / 6);
@@ -84,17 +84,17 @@ h1 {
   transition: inherit;
   width: calc(var(--width) * 2.5 / 6);
 }
-#time + label:before { /* sun */
+#dark_toggle + label:before { /* sun */
   background: #F9D71C;
   opacity: calc(1 - var(--checked));
   top: calc(var(--checked) * (10% + calc(var(--width) / 12)));
 }
-#time + label:after { /* moon */
+#dark_toggle + label:after { /* moon */
   background: radial-gradient(circle at 25% 25%, transparent 50%, #fff 50%);
   grid-column: 2;
   opacity: var(--checked);
   top: calc(-75% - calc(var(--width) / 12) - (var(--checked) * 25%));
 }
-#time:checked + label {
+#dark_toggle:checked + label {
   --checked: 1;
 }
