@@ -86,7 +86,7 @@ a:active {
 
 /* FLICKITY */
 .carousel {
-  background: dimgrey;
+  background: #404040;
   margin-bottom: 0.5em;
   margin-top: calc(var(--dot-size) / 2);
 }

@@ -1,8 +1,8 @@
 body {
-  --dark-bg-color: #111;
-  --dark-text-color: #EEE;
-  --light-bg-color: #EEE;
-  --light-text-color: #111;
+  --dark-bg-color: #202020;
+  --dark-text-color: snow;
+  --light-bg-color: snow;
+  --light-text-color: #202020;
 
   background: var(--main-bg-color);
   color: var(--main-text-color);
