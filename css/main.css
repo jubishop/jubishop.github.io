@@ -62,6 +62,7 @@ h1 {
   --checked: 0;
 
   background: hsl(200, 100%, calc((1 - var(--checked))*50%));
+  border: 1px solid var(--dark-bg-color);
   border-radius: calc(var(--width) * 1.75 / 6);
   color: transparent;
   cursor: pointer;
@@ -97,4 +98,6 @@ h1 {
 }
 #dark_toggle:checked + label {
   --checked: 1;
+
+  border: 1px solid var(--light-bg-color);
 }
