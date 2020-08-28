@@ -5,3 +5,28 @@ body {
   background-position: 0 0, 50px 50px;
   background-size: 100px 100px;
 }
+
+h1 {
+  font-family: 'Fira Mono', monospace;
+  font-size: 4em;
+}
+
+h1 span {
+  --rotation: 3deg;
+  display: inline-block;
+  padding: 0.1em 0.1em;
+  margin: 0 -0.07em;
+}
+
+h1 span:nth-of-type(odd) {
+  transform: rotate(calc(var(--rotation) * -1));
+  background: pink;
+}
+h1 span:nth-of-type(even) {
+  transform: rotate(var(--rotation));
+  background: yellow;
+}
+
+h2 {
+  text-align: center;
+}
