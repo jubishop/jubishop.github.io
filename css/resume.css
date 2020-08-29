@@ -9,13 +9,14 @@ body {
 h1 {
   font-family: 'Fira Mono', monospace;
   font-size: 4em;
+  margin: 0;
 }
 
 h1 span {
   --rotation: 3deg;
   display: inline-block;
-  padding: 0.1em 0.1em;
-  margin: 0 -0.07em;
+  padding: 0.15em;
+  margin: 0 -0.3em;
 }
 
 h1 span:nth-of-type(odd) {
