@@ -202,7 +202,8 @@ a:active {
 }
 
 .timeline-period:after {
-  bottom: calc(var(--period-padding) * -1 + var(--dot-margin) - var(--separator-thickness));
+  bottom: calc(var(--period-padding) * -1 + var(--dot-margin) -
+          var(--separator-thickness));
   height: calc(var(--period-padding) - var(--dot-margin) + 1px);
 }
 
@@ -290,7 +291,8 @@ h2 .fad, h2 .fab, h2 .fas {
   .timeline-item:before {
     animation-name: point-right;
     content: "\f101";
-    left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2);
+    left: calc(var(--left-column-width) + var(--grid-gap) / 2 -
+          var(--dot-size) / 2);
   }
 
   .timeline-date {
@@ -299,15 +301,18 @@ h2 .fad, h2 .fab, h2 .fas {
   }
 
   .timeline-period {
-    left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--dot-size) / 2);
+    left: calc(var(--left-column-width) + var(--grid-gap) / 2 -
+          var(--dot-size) / 2);
   }
 
   .timeline-period {
-    width: calc(100% - var(--left-column-width) - var(--grid-gap) / 2 + var(--dot-size) / 2);
+    width: calc(100% - var(--left-column-width) - var(--grid-gap) / 2 +
+           var(--dot-size) / 2);
   }
 
   .timeline-item:after {
-    left: calc(var(--left-column-width) + var(--grid-gap) / 2 - var(--vertical-line-width) / 2);
+    left: calc(var(--left-column-width) + var(--grid-gap) / 2 -
+          var(--vertical-line-width) / 2);
   }
 
   .timeline-content {

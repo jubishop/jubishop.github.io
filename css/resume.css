@@ -1,9 +1,16 @@
 body {
-  background-color: paleturquoise;
-  background-image: radial-gradient(powderblue 30%, transparent 30%),
-                    radial-gradient(powderblue 30%, transparent 30%);
-  background-position: 0 0, 15px 15px;
-  background-size: 30px 30px;
+  --bg-size: 20px;
+  --bg-position: calc(var(--bg-size) / 2);
+  --rad-color: #d0eded;
+  --rad-percent: 30%;
+
+  background-color: #c2e8e8;
+  background-image:
+    radial-gradient(var(--rad-color) var(--rad-percent), transparent 0%),
+    radial-gradient(var(--rad-color) var(--rad-percent), transparent 0%);
+  background-position: 0 0, var(--bg-position) var(--bg-position);
+
+  background-size: var(--bg-size) var(--bg-size);
 }
 
 h1 {
@@ -15,19 +22,23 @@ h1 {
 h1 span {
   --rotation: 3deg;
   display: inline-block;
-  padding: 0.15em;
   margin: 0 -0.3em;
+  padding: 0.15em;
 }
 
 h1 span:nth-of-type(odd) {
-  transform: rotate(calc(var(--rotation) * -1));
   background: pink;
+  transform: rotate(calc(var(--rotation) * -1));
 }
 h1 span:nth-of-type(even) {
-  transform: rotate(var(--rotation));
   background: yellow;
+  transform: rotate(var(--rotation));
 }
 
 h2 {
+  font-family: 'Satisfy', cursive;
+  font-size: 2.5em;
+  margin-bottom: 0.1em;
+  margin-top: 0.5em;
   text-align: center;
 }
