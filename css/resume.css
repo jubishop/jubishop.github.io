@@ -1,16 +1,16 @@
 body {
   --bg-size: 20px;
   --bg-position: calc(var(--bg-size) / 2);
-  --rad-color: #d0eded;
+  --rad-color: #D0EDED;
   --rad-percent: 30%;
 
-  background-color: #c2e8e8;
+  background-color: #C2E8E8;
   background-image:
     radial-gradient(var(--rad-color) var(--rad-percent), transparent 0%),
     radial-gradient(var(--rad-color) var(--rad-percent), transparent 0%);
   background-position: 0 0, var(--bg-position) var(--bg-position);
-
   background-size: var(--bg-size) var(--bg-size);
+  text-align: center;
 }
 
 h1 {
@@ -40,5 +40,32 @@ h2 {
   font-size: 2.5em;
   margin-bottom: 0.1em;
   margin-top: 0.5em;
-  text-align: center;
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.menu {
+  background-color: pink;
+  margin: 2em 1em;
+  padding: 2em;
+  text-transform: uppercase;
+}
+
+/* WIDE SCREENS */
+@media only screen and (min-width: 1024px) {
+  .course {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "item item";
+    grid-template-columns: 50% 50%;
+  }
+
+
+  .course h3 {
+    grid-area: header;
+  }
 }
