@@ -1,7 +1,7 @@
 body {
   background-color: paleturquoise;
-  background-image: radial-gradient(honeydew 30%, transparent 30%),
-                    radial-gradient(honeydew 30%, transparent 30%);
+  background-image: radial-gradient(powderblue 30%, transparent 30%),
+                    radial-gradient(powderblue 30%, transparent 30%);
   background-position: 0 0, 15px 15px;
   background-size: 30px 30px;
 }
