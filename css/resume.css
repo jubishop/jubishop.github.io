@@ -49,13 +49,18 @@ h3 {
 
 .menu {
   background-color: pink;
-  margin: 2em 1em;
+  margin: 2em auto;
   padding: 2em;
   text-transform: uppercase;
+  width: 24em;
 }
 
 /* WIDE SCREENS */
 @media only screen and (min-width: 1024px) {
+  .menu {
+    width: 40em;
+  }
+
   .course {
     display: grid;
     grid-template-areas:
