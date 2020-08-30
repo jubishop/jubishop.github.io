@@ -1,10 +1,23 @@
+body.light {
+  --bg-color: #C2E8E8;
+  --rad-color: #D0EDED;
+  --primary-color: pink;
+  --secondary-color: yellow;
+}
+
+body.dark {
+  --bg-color: #2d3636;
+  --rad-color: #353d3d;
+  --primary-color: rebeccapurple;
+  --secondary-color: darkslategrey;
+}
+
 body {
   --bg-size: 20px;
   --bg-position: calc(var(--bg-size) / 2);
-  --rad-color: #D0EDED;
   --rad-percent: 30%;
 
-  background-color: #C2E8E8;
+  background-color: var(--bg-color);
   background-image:
     radial-gradient(var(--rad-color) var(--rad-percent), transparent 0%),
     radial-gradient(var(--rad-color) var(--rad-percent), transparent 0%);
@@ -27,11 +40,11 @@ h1 span {
 }
 
 h1 span:nth-of-type(odd) {
-  background: pink;
+  background: var(--primary-color);
   transform: rotate(calc(var(--rotation) * -1));
 }
 h1 span:nth-of-type(even) {
-  background: yellow;
+  background: var(--secondary-color);
   transform: rotate(var(--rotation));
 }
 
@@ -60,7 +73,7 @@ p {
 }
 
 .menu {
-  background-color: pink;
+  background-color: var(--primary-color);
   display: grid;
   margin: 2em auto;
   padding: 1em;
@@ -70,7 +83,7 @@ p {
 }
 
 .menu::before {
-  background-color: yellow;
+  background-color: var(--secondary-color);
   bottom: 0;
   content: "";
   left: 0;
