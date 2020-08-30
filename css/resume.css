@@ -99,7 +99,7 @@ p {
 @media only screen and (min-width: 800px) {
   .menu {
     row-gap: 2em;
-    width: 36em;
+    width: 40em;
   }
   .menu::before {
     transform: rotate(-6deg);
