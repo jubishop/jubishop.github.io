@@ -1,9 +1,12 @@
+body.light {
+  --main-bg-color: snow;
+  --main-text-color: #202020;
+}
+body.dark {
+  --main-bg-color: #202020;
+  --main-text-color: snow;
+}
 body {
-  --dark-bg-color: #202020;
-  --dark-text-color: snow;
-  --light-bg-color: snow;
-  --light-text-color: #202020;
-
   background: var(--main-bg-color);
   color: var(--main-text-color);
   font-family: "Fira Sans", sans-serif;

@@ -1,14 +1,5 @@
 class DarkMode {
   static domLoaded() {
-    this.DarkBG =
-      getComputedStyle(document.body).getPropertyValue("--dark-bg-color");
-    this.LightBG =
-      getComputedStyle(document.body).getPropertyValue("--light-bg-color");
-    this.DarkText =
-      getComputedStyle(document.body).getPropertyValue("--dark-text-color");
-    this.LightText =
-      getComputedStyle(document.body).getPropertyValue("--light-text-color");
-
     this.updateStyles();
 
     const elem = document.getElementById("dark_toggle");
@@ -30,15 +21,7 @@ class DarkMode {
   }
 
   static updateStyles() {
-    const dark_mode = this.getDarkMode();
-    document.body.style.setProperty(
-      "--main-bg-color",
-      dark_mode ? this.DarkBG : this.LightBG);
-    document.body.style.setProperty(
-      "--main-text-color",
-      dark_mode ? this.DarkText : this.LightText);
-
-    if (dark_mode) {
+    if (this.getDarkMode()) {
       document.body.classList.add("dark");
       document.body.classList.remove("light");
     } else {
