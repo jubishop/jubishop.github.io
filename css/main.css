@@ -77,7 +77,7 @@ h1 {
   -webkit-user-select: none;
   width: var(--width);
 }
-#dark_toggle + label:before, #dark_toggle + label:after {
+#dark_toggle + label::before, #dark_toggle + label::after {
   border-radius: 100%;
   content: "";
   height: calc(var(--width) * 2.5 / 6);
@@ -85,12 +85,12 @@ h1 {
   transition: inherit;
   width: calc(var(--width) * 2.5 / 6);
 }
-#dark_toggle + label:before { /* sun */
+#dark_toggle + label::before { /* sun */
   background: #F9D71C;
   opacity: calc(1 - var(--checked));
   top: calc(var(--checked) * (10% + calc(var(--width) / 12)));
 }
-#dark_toggle + label:after { /* moon */
+#dark_toggle + label::after { /* moon */
   background: radial-gradient(circle at 25% 25%, transparent 50%, #fff 50%);
   grid-column: 2;
   opacity: var(--checked);

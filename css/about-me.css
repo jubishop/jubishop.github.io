@@ -39,7 +39,7 @@ a:active {
   60% { transform: scale(1); }
   100% { transform: scale(1); }
 }
-.timeline-item:before {
+.timeline-item::before {
   animation: heart-pulse 1s ease-in-out infinite alternate;
   content: "\f21e";
   display: inline-block;
@@ -56,7 +56,7 @@ a:active {
   text-rendering: auto;
 }
 
-.timeline-item:after {
+.timeline-item::after {
   background: var(--line-color);
   bottom: 0;
   content: "";
@@ -187,8 +187,8 @@ a:active {
   width: 100%;
 }
 
-.timeline-period:before,
-.timeline-period:after {
+.timeline-period::before,
+.timeline-period::after {
   background: var(--line-color);
   content: "";
   left: calc((var(--dot-size) - var(--vertical-line-width)) / 2);
@@ -196,12 +196,12 @@ a:active {
   width: var(--vertical-line-width);
 }
 
-.timeline-period:before {
+.timeline-period::before {
   height: calc(var(--period-padding) + 1px);
   top: calc(var(--period-padding) * -1 - var(--separator-thickness));
 }
 
-.timeline-period:after {
+.timeline-period::after {
   bottom: calc(var(--period-padding) * -1 + var(--dot-margin) -
           var(--separator-thickness));
   height: calc(var(--period-padding) - var(--dot-margin) + 1px);
@@ -288,7 +288,7 @@ h2 .fad, h2 .fab, h2 .fas {
     grid-template-columns: var(--left-column-width) auto;
     padding: 0;
   }
-  .timeline-item:before {
+  .timeline-item::before {
     animation-name: point-right;
     content: "\f101";
     left: calc(var(--left-column-width) + var(--grid-gap) / 2 -
@@ -310,7 +310,7 @@ h2 .fad, h2 .fab, h2 .fas {
            var(--dot-size) / 2);
   }
 
-  .timeline-item:after {
+  .timeline-item::after {
     left: calc(var(--left-column-width) + var(--grid-gap) / 2 -
           var(--vertical-line-width) / 2);
   }
@@ -347,15 +347,15 @@ h2 .fad, h2 .fab, h2 .fas {
     grid-template-areas: "content date";
   }
 
-  .timeline-item:before {
+  .timeline-item::before {
     left: calc(50% + var(--grid-gap) / 2 - var(--dot-size) / 2);
   }
-  .timeline-item:nth-of-type(odd):before {
+  .timeline-item:nth-of-type(odd)::before {
     animation-name: point-left;
     content: "\f100";
   }
 
-  .timeline-item:after {
+  .timeline-item::after {
     left: calc(50% + var(--grid-gap) / 2 - var(--vertical-line-width) / 2);
   }
 
@@ -374,8 +374,8 @@ h2 .fad, h2 .fab, h2 .fas {
     width: 100%;
   }
 
-  .timeline-period:before,
-  .timeline-period:after {
+  .timeline-period::before,
+  .timeline-period::after {
     left: calc(50% - var(--vertical-line-width) / 2);
   }
 }
