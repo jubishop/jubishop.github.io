@@ -4,14 +4,12 @@ body.light {
   --primary-color: pink;
   --secondary-color: yellow;
 }
-
 body.dark {
   --bg-color: #2d3636;
   --rad-color: #353d3d;
   --primary-color: rebeccapurple;
   --secondary-color: darkslategrey;
 }
-
 body {
   --bg-size: 20px;
   --bg-position: calc(var(--bg-size) / 2);
@@ -31,14 +29,12 @@ h1 {
   font-size: 4em;
   margin: 0;
 }
-
 h1 span {
   --rotation: 3deg;
   display: inline-block;
   margin: 0 -0.3em;
   padding: 0.15em;
 }
-
 h1 span:nth-of-type(odd) {
   background: var(--primary-color);
   transform: rotate(calc(var(--rotation) * -1));
@@ -81,7 +77,6 @@ p {
   row-gap: 1em;
   width: 24em;
 }
-
 .menu::before {
   background-color: var(--secondary-color);
   bottom: 0;
@@ -106,7 +101,6 @@ p {
     row-gap: 2em;
     width: 36em;
   }
-
   .menu::before {
     transform: rotate(-6deg);
   }
