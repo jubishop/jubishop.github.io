@@ -68,14 +68,11 @@ h4 {
 
   .course {
     display: grid;
-    grid-template-areas:
-      "header header"
-      "item item";
     grid-template-columns: 50% 50%;
   }
 
 
   .course h3 {
-    grid-area: header;
+    grid-column: 1 / span 2;
   }
 }
