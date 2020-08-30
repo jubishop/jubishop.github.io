@@ -50,13 +50,13 @@ h3 {
 
 h4 {
   font-family: "Kaushan Script", cursive;
-  margin: 0;
   font-size: 1.5em;
+  margin: 0;
 }
 
 p {
-  margin: 0;
   font-size: 1.2em;
+  margin: 0;
 }
 
 .menu {
@@ -64,8 +64,21 @@ p {
   display: grid;
   margin: 2em auto;
   padding: 1em;
+  position: relative;
   row-gap: 1em;
   width: 24em;
+}
+
+.menu::before {
+  background-color: yellow;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 2em;
+  transform: rotate(-3deg);
+  z-index: -1;
 }
 
 .item {
@@ -77,8 +90,12 @@ p {
 /* WIDE SCREENS */
 @media only screen and (min-width: 800px) {
   .menu {
-    width: 36em;
     row-gap: 2em;
+    width: 36em;
+  }
+
+  .menu::before {
+    transform: rotate(-6deg);
   }
 
   .course {
@@ -86,7 +103,6 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
 
   .course h3 {
     grid-column: 1 / span 2;
