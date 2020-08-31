@@ -60,7 +60,6 @@ h3 {
 h4 {
   font-family: "Kaushan Script", cursive;
   font-size: 2.5em;
-  text-decoration: underline;
   margin: 0;
 }
 
@@ -73,9 +72,9 @@ p {
   background-color: var(--primary-color);
   display: grid;
   margin: 2em auto;
-  padding: 1em;
+  padding: 2em 1em;
   position: relative;
-  row-gap: 1em;
+  row-gap: 2em;
   width: 32em;
 }
 .menu::before {
@@ -99,7 +98,6 @@ p {
 /* WIDE SCREENS */
 @media only screen and (min-width: 1024px) {
   .menu {
-    row-gap: 2em;
     width: 60em;
   }
   .menu::before {
