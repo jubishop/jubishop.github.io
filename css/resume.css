@@ -116,15 +116,35 @@ p {
 
 /* PRINT */
 @media print {
+  body {
+    background-color: white;
+    background-image: none;
+    color: black;
+  }
+
+  h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 4em;
+  }
+  h1 span {
+    background-color: white !important;
+    margin: 0;
+    padding: 0;
+    transform: none !important;
+  }
+
   h2 {
     margin: 0;
   }
 
-  .header-icon {
+  .header-icon,
+  #dark_toggle + label {
     display: none !important;
   }
 
-  .menu {
+  .menu,
+  .menu::before {
+    background-color: white;
     margin: 0 auto;
   }
 }
