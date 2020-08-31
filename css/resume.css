@@ -95,8 +95,8 @@ p {
   margin-right: 2em;
 }
 
-/* WIDE SCREENS */
-@media only screen and (min-width: 1024px) {
+/* WIDE SCREENS / PRINT */
+@media (min-width: 1024px), print {
   .menu {
     width: 60em;
   }
@@ -109,8 +109,22 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
   .course h3 {
     grid-column: 1 / span 2;
+  }
+}
+
+/* PRINT */
+@media print {
+  h2 {
+    margin: 0;
+  }
+
+  .header-icon {
+    display: none !important;
+  }
+
+  .menu {
+    margin: 0 auto;
   }
 }
