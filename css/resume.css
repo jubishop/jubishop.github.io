@@ -26,7 +26,7 @@ body {
 
 h1 {
   font-family: "Fira Mono", monospace;
-  font-size: 4em;
+  font-size: 5em;
   margin: 0;
 }
 h1 span {
@@ -46,25 +46,26 @@ h1 span:nth-of-type(even) {
 
 h2 {
   font-family: "Satisfy", cursive;
-  font-size: 2.5em;
-  margin: 0.2em 0;
+  font-size: 4em;
+  margin: 0.1em 0;
 }
 
 h3 {
   font-family: "Sriracha", cursive;
-  font-size: 2em;
+  font-size: 3em;
   margin: 0;
   text-transform: uppercase;
 }
 
 h4 {
   font-family: "Kaushan Script", cursive;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  text-decoration: underline;
   margin: 0;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 2em;
   margin: 0;
 }
 
@@ -75,7 +76,7 @@ p {
   padding: 1em;
   position: relative;
   row-gap: 1em;
-  width: 24em;
+  width: 32em;
 }
 .menu::before {
   background-color: var(--secondary-color);
@@ -96,10 +97,10 @@ p {
 }
 
 /* WIDE SCREENS */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .menu {
     row-gap: 2em;
-    width: 40em;
+    width: 60em;
   }
   .menu::before {
     transform: rotate(-6deg);
