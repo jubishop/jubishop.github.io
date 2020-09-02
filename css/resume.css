@@ -159,7 +159,7 @@ p {
     background-color: white;
     margin: 0 auto;
     padding: 0;
-    row-gap: 12px;
+    row-gap: 24px;
     width: 100%;
   }
   .menu::before {
@@ -168,5 +168,11 @@ p {
 
   .course {
     column-gap: 24px;
+  }
+
+  .item {
+    margin-bottom: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
