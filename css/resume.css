@@ -124,7 +124,7 @@ p {
 
   h1 {
     font-family: "Fira Sans", sans-serif;
-    font-size: 4em;
+    font-size: 48px;
   }
   h1 span {
     background-color: white !important;
@@ -134,7 +134,20 @@ p {
   }
 
   h2 {
+    font-size: 40px;
     margin: 0;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 20px;
   }
 
   .header-icon,
@@ -142,9 +155,18 @@ p {
     display: none !important;
   }
 
-  .menu,
-  .menu::before {
+  .menu {
     background-color: white;
     margin: 0 auto;
+    padding: 0;
+    row-gap: 12px;
+    width: 100%;
+  }
+  .menu::before {
+    display: none;
+  }
+
+  .course {
+    column-gap: 24px;
   }
 }
