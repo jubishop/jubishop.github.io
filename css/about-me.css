@@ -118,13 +118,11 @@ a:active {
 .flickity-button-icon {
   fill: white;
 }
-@media (pointer: fine) {
-  .flickity-fullscreen-button {
-    --corner-padding: 0.5em;
-    --size: 2em;
+.flickity-fullscreen-button {
+  --corner-padding: 0.5em;
+  --size: 2em;
 
-    border-radius: 0.25em;
-  }
+  border-radius: 0.25em;
 }
 @media (pointer: coarse) {
   .flickity-fullscreen-button {
@@ -148,13 +146,11 @@ a:active {
   top: var(--icon-padding);
   width: calc(100% - var(--icon-padding) * 2);
 }
-@media (pointer: fine) {
-  .flickity-prev-next-button {
-    --edge-padding: 0.75em;
-    --size: 3em;
+.flickity-prev-next-button {
+  --edge-padding: 0.75em;
+  --size: 3em;
 
-    border-radius: 0.5em;
-  }
+  border-radius: 0.5em;
 }
 @media (pointer: coarse) {
   .flickity-prev-next-button {

@@ -35,15 +35,13 @@ h1 {
   top: 0;
 }
 
-@media (pointer: fine) {
-  .header-icon {
-    font-size: 2.5em;
-  }
-  #dark_toggle + label {
-    --width: 3em;
-    right: 5em;
-    transition: all 0.5s ease;
-  }
+.header-icon {
+  font-size: 2.5em;
+}
+#dark_toggle + label {
+  --width: 3em;
+  right: 5em;
+  transition: all 0.5s ease;
 }
 @media (pointer: coarse) {
   .header-icon {
