@@ -108,15 +108,12 @@ a:active {
   max-width: 100%;
 }
 .flickity-button {
-  background: grey;
+  background: lightgrey;
 }
 @media (hover: hover) {
   .flickity-button:hover {
     background: orange;
   }
-}
-.flickity-button-icon {
-  fill: white;
 }
 .flickity-fullscreen-button {
   --corner-padding: 0.5em;
@@ -127,7 +124,7 @@ a:active {
 @media (pointer: coarse) {
   .flickity-fullscreen-button {
     --corner-padding: 1.5em;
-    --size: 5em;
+    --size: 4em;
 
     border-radius: 0.75em;
   }
@@ -155,7 +152,7 @@ a:active {
 @media (pointer: coarse) {
   .flickity-prev-next-button {
     --edge-padding: 1.5em;
-    --size: 6em;
+    --size: 4em;
 
     border-radius: 1em;
   }
