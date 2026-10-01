@@ -1,0 +1,16 @@
+# Repository maintenance files are not part of the public website.
+exclude:
+  - AGENTS.md
+  - LICENSE.project-starter
+  - bin
+  - docs
+  - memory
+  - tests
+  - worktrees
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
