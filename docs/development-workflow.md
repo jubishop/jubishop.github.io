@@ -41,8 +41,18 @@ project has no application checks and no `bin/check-application`, so
 
 GitHub validation is defined in [the workflow](../.github/workflows/check.yml),
 which runs `bin/check --full` on pull requests and pushes to `master`.
-Full CI success must be checked for the delivered revision; a local pass does
-not establish a remote result.
+Require successful full CI for the delivered revision, except for the
+confirmed capacity exception below. A local pass does not establish a remote
+result.
+
+If GitHub CI is blocked solely by confirmed Actions quota exhaustion or
+GitHub rate limiting, run `bin/check --full` and all equivalent required
+checks locally on the exact revision being delivered. Once they pass,
+continue the normal review, merge, and cleanup process without waiting for
+hosted CI. Record the blocker, tested revision, commands, and results; report
+CI as unavailable, not passed. Actual test failures, unknown failures, and
+checks that cannot be validated locally remain blockers. Do not bypass
+enforced branch protections, required approvals, or deployment gates.
 
 ## Runtime and toolchain versions
 
