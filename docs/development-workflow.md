@@ -40,9 +40,11 @@ project has no application checks and no `bin/check-application`, so
 `bin/check --full` runs only the foundation checks.
 
 GitHub validation is defined in [the workflow](../.github/workflows/check.yml),
-which runs `bin/check --full` on pull requests and pushes to `master`.
-Full CI success must be checked for the delivered revision; a local pass does
-not establish a remote result.
+which runs `bin/check --full` on pull requests and pushes to `master`, except
+when every changed file is Markdown. The [hosted CI
+rules](foundation/engineering-policy.md#hosted-ci) cover that case. Full CI
+success must be checked for the delivered revision; a local pass does not
+establish a remote result.
 
 ## Runtime and toolchain versions
 
