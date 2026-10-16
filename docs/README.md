@@ -58,5 +58,4 @@ hand-written pages to bypass failed checks.
   knowledge search, and task tracking policy.
 - [Development workflow](development-workflow.md): this project's setup,
   checks, versions, and deployment.
-- [Git remotes](git-remotes.md): private SourceHut creation, dual pushes,
-  verification, and fresh-clone setup.
+- [Git remotes](git-remotes.md): the primary remote and fresh-clone setup.
