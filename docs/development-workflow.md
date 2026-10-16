@@ -50,7 +50,7 @@ establish a remote result.
 
 The site has no build step or application runtime. GitHub Pages builds it
 with its own managed Jekyll version. Foundation checks need Python 3.9 or
-later and ShellCheck; CI runs them on Ubuntu 24.04.
+later and ShellCheck; CI runs them on the GitHub-hosted `ubuntu-latest` runner.
 
 ## Deployment
 
