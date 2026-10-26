@@ -4,7 +4,7 @@ Registered on Squarespace
 
 Run `bin/setup` to prepare local knowledge search and Git hooks. It requires
 Git and Python 3.9 or later; QMD and direnv are optional. Install ShellCheck
-for checks. Follow the [task workflow](docs/foundation/task-tracking.md) to initialize td.
+for checks.
 
 Use `bin/check --documents-only` for Markdown changes, `bin/check` for
 foundation static checks, and `bin/check --full` to add any application checks

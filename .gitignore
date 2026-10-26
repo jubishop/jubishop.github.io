@@ -1,7 +1,5 @@
 *.DS_Store
 
-# td
-
 # Local project foundation state
 
 # project-starter:begin
@@ -15,5 +13,4 @@
 __pycache__/
 *.py[cod]
 worktrees/
-.todos/
 # project-starter:end
