@@ -47,18 +47,33 @@ establish a remote result.
 
 ## Runtime and toolchain versions
 
-The site has no build step or application runtime. GitHub Pages builds it
-with its own managed Jekyll version. Foundation checks need Python 3.9 or
-later and ShellCheck; CI runs them on the GitHub-hosted `ubuntu-latest` runner.
+The site has no local build step or application runtime. The Pages workflow
+builds it with `actions/jekyll-build-pages`, which uses GitHub Pages' managed
+Jekyll version. Foundation checks need Python 3.9 or later and ShellCheck; CI
+runs them on the GitHub-hosted `ubuntu-latest` runner.
 
 ## Deployment
 
-GitHub Pages builds from the `master` branch root and publishes every push to
-`jubishop.com`; there is no separate deployment step or skip mechanism.
-The Jekyll configuration above excludes agent instructions, tools, and
-knowledge pages from the published site, so pushing changes to them
-republishes the same site. To republish without a new commit, request a Pages
-build from the repository settings.
+[The Pages workflow](../.github/workflows/pages.yml) builds the `master`
+branch root with Jekyll and deploys it to `jubishop.com` on every push to
+`master`. On pull requests it only builds, so a change that breaks the Jekyll
+build fails before it merges. The repository's Pages source must be set to
+GitHub Actions, not to a branch.
+
+The workflow replaced GitHub's built-in branch build on 2026-11-09. GitHub's
+Pages service sometimes fails a deployment with "Deployment failed, try again
+later." although the build succeeded, as it did on 2026-11-06 and
+2026-11-09, and the built-in build has no way to retry. A rerun 13 and 25
+minutes later passed each time. The deploy job therefore tries again after
+two minutes and then after ten more, and fails only when all three attempts
+fail.
+
+A commit with `[skip ci]` in its message, such as a Project Starter sync,
+starts no Pages run and is published with the next push. The Jekyll
+configuration above excludes agent instructions, tools, and knowledge pages
+from the published site, so such commits need no deployment. To deploy without
+a new commit, run the Pages workflow on `master` from the repository's Actions
+tab or with `gh workflow run pages.yml --ref master`.
 
 ## Project Starter
 
