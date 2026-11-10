@@ -1,0 +1,68 @@
+name: Pages
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Pull requests only build, so a newer push cancels their run. Deploys never
+# cancel one in progress; a newer push replaces only a run still waiting.
+concurrency:
+  group: pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      # The same action and Jekyll version as GitHub's own Pages build.
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - uses: actions/upload-pages-artifact@v5
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    # Three deploy attempts of up to 10 minutes each, plus the waits.
+    timeout-minutes: 45
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.final-attempt.outputs.page_url || steps.second-attempt.outputs.page_url || steps.first-attempt.outputs.page_url }}
+    # GitHub's Pages service sometimes fails a deployment with "Deployment
+    # failed, try again later." even though the build is fine, and a later
+    # attempt succeeds, so retry the deployment after a pause.
+    steps:
+      - name: Deploy to GitHub Pages
+        id: first-attempt
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Wait before retrying
+        if: steps.first-attempt.outcome == 'failure'
+        run: sleep 120
+      - name: Retry the deployment
+        id: second-attempt
+        if: steps.first-attempt.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Wait before the last retry
+        if: steps.second-attempt.outcome == 'failure'
+        run: sleep 600
+      - name: Retry the deployment one last time
+        id: final-attempt
+        if: steps.second-attempt.outcome == 'failure'
+        uses: actions/deploy-pages@v5
